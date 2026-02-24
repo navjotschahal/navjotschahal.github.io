@@ -10,12 +10,13 @@ export default function Research() {
       <div className="card-list">
         {researchData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlock image={item.image} videoUrl={item.videoUrl} title={item.title} />
+            <MediaBlock media={item.media} title={item.title} />
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>
                 <span className="card-year">{item.year}</span>
               </div>
+              {item.badge && <span className="badge-highlight">{item.badge}</span>}
               <p className="card-venue">{item.venue}</p>
               <p className="card-authors">{item.authors.join(', ')}</p>
               <p className="card-desc">{item.description}</p>

@@ -4,69 +4,114 @@
     "title": "Proprioception Sensory Awareness for Low-Level Robot Control",
     "description": "Independent study at Figueroa GRASP Lab on proprioception-based sensory awareness in robots for low-level control, aiding exteroception (vision, active sensors). Inspired by the human muscle system.",
     "abstract": "This research investigates manufacturer-agnostic proprioceptive data acquisition for robotic platforms. We build C++ and Python libraries to acquire current and torque sensor data from robot actuators (Franka arms, Castor Bot), then model environmental awareness in PyBullet simulators. A key goal is building inference characteristics on current/torque relationships to design auto-tuning models deployable on any robotic platform — analogous to proprioception in the human neuromuscular system.",
-    "tags": ["Robotics", "Proprioception", "Control Systems", "PyBullet", "C++", "Python", "Franka"],
+    "tags": [
+      "Robotics",
+      "Proprioception",
+      "Control Systems",
+      "PyBullet",
+      "C++",
+      "Python",
+      "Franka"
+    ],
     "year": 2026,
     "venue": "University of Pennsylvania — Figueroa GRASP Lab (Independent Study)",
     "paperUrl": "#",
     "codeUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "authors": ["Navjot Singh Chahal"]
+    "authors": [
+      "Navjot Singh Chahal"
+    ],
+    "media": []
   },
   {
     "id": 2,
     "title": "Modular Robotic Platform with String Actuators and Multi-Agent Cognitive Perception",
     "description": "Research at Mod Lab developing string actuators for the modular robotic platform Abott, and defining a multi-agent system for analysis of proprioceptive actuator data for task cognitive perception.",
     "abstract": "We design and build string actuators for the Abott modular robotic platform, defining the scope of a multi-agent system that analyzes proprioceptive actuator data to achieve task cognitive perception. Independent agents either reinforce motor control or mutate the physical agent configuration based on sensory inputs, enabling adaptive, self-reconfiguring robotic behavior.",
-    "tags": ["Modular Robotics", "Actuators", "Multi-Agent Systems", "Cognitive Perception", "Motor Control"],
+    "tags": [
+      "Modular Robotics",
+      "Actuators",
+      "Multi-Agent Systems",
+      "Cognitive Perception",
+      "Motor Control"
+    ],
     "year": 2026,
     "venue": "University of Pennsylvania — Mod Lab",
     "paperUrl": "#",
     "codeUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "authors": ["Navjot Singh Chahal"]
+    "authors": [
+      "Navjot Singh Chahal"
+    ],
+    "media": []
   },
   {
     "id": 3,
     "title": "Experimental Validation of Quantum Algorithms on IBM Quantum Hardware",
     "description": "Developed interactive Python notebooks for ESE 5090 QHEL Lab to perform experimental validation of quantum gates and algorithms on IBM Cloud quantum devices. Engineered quantum spin control apparatus.",
     "abstract": "We developed an interactive Python notebook enabling students to perform hands-on experimental validation of quantum gates on real IBM quantum devices via IBM Cloud. Implemented algorithms including Grover's, Shor's, Quantum Fourier Transform, Bernstein-Vazirani, Simon's Algorithm, and quantum cryptography. Additionally, engineered a quantum control apparatus using the Digital Programmable Function Generator Moku-go for arbitrary function generation, enabling quantum spin control — specifically manipulating the intrinsic angular momentum (spin) of protons in Hydrogen atoms to prepare, evolve, and measure quantum states via NMR.",
-    "tags": ["Quantum Computing", "Qiskit", "IBM Quantum", "Grover's Algorithm", "Shor's Algorithm", "NMR", "Moku-go"],
+    "tags": [
+      "Quantum Computing",
+      "Qiskit",
+      "IBM Quantum",
+      "Grover's Algorithm",
+      "Shor's Algorithm",
+      "NMR",
+      "Moku-go"
+    ],
     "year": 2025,
     "venue": "University of Pennsylvania — ESE 5090 QHEL Lab (Teaching & Research Assistant)",
     "paperUrl": "#",
     "codeUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "authors": ["Navjot Singh Chahal"]
+    "authors": [
+      "Navjot Singh Chahal"
+    ],
+    "media": []
   },
   {
     "id": 4,
     "title": "Model Predictive Control for F1Tenth Autonomous Racing",
     "description": "Formulated and implemented a Model Predictive Control (MPC) controller for the F1Tenth 1/10th-scale autonomous racing platform. The controller uses convex optimization to generate optimal steering and acceleration inputs over a receding horizon.",
     "abstract": "This work presents an MPC-based autonomous vehicle controller using a kinematic bicycle model with state space [x, y, θ, v]. We formulate a convex Quadratic Program (QP) minimizing trajectory deviation, input effort, and input rate of change subject to vehicle dynamic constraints. The continuous ODE is linearized via first-order Taylor expansion and discretized with Forward Euler, then solved at each timestep using CVXPY with the OSQP backend. The controller was validated in F1Tenth simulation and on a physical car in the Levine hallway at UPenn, achieving 2nd place in the University Competition.",
-    "tags": ["Robotics", "Control Systems", "MPC", "Convex Optimization", "Autonomous Vehicles", "Python", "CVXPY", "OSQP"],
+    "tags": [
+      "Robotics",
+      "Control Systems",
+      "MPC",
+      "Convex Optimization",
+      "Autonomous Vehicles",
+      "Python",
+      "CVXPY",
+      "OSQP"
+    ],
     "year": 2025,
     "venue": "University of Pennsylvania — ESE 615 / X-Lab (F1Tenth Autonomous Racing)",
     "paperUrl": "#",
     "codeUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
-    "image": "",
-    "videoUrl": "",
-    "authors": ["Navjot Singh Chahal"]
+    "authors": [
+      "Navjot Singh Chahal"
+    ],
+    "media": []
   },
   {
     "id": 5,
     "title": "Computer Vision Pipeline for F1Tenth with Intel RealSense D435i",
     "description": "Designed a complete computer vision pipeline for an autonomous F1Tenth racing car using an Intel RealSense D435i camera mounted on a Jetson NX. The pipeline covers camera calibration, ground-plane distance measurement, lane detection, and object detection.",
     "abstract": "We built an integrated perception stack for an F1Tenth vehicle. Camera intrinsics were obtained via chessboard calibration (findChessboardCorners, calibrateCamera). Ground-plane distance estimation uses the calibrated intrinsic matrix and measured camera mounting height. Lane detection applies HSV color segmentation and contour-finding. A custom YOLO-like network was trained in PyTorch on a labeled F110 car dataset, converted to ONNX, and deployed via TensorRT 8.5 on the Jetson NX in both FP32 and FP16 modes. The full pipeline integrates all components to output detected lane boundaries and vehicle distances in real time at 60Hz.",
-    "tags": ["Computer Vision", "Deep Learning", "TensorRT", "YOLO", "OpenCV", "C++", "Python", "Robotics"],
+    "tags": [
+      "Computer Vision",
+      "Deep Learning",
+      "TensorRT",
+      "YOLO",
+      "OpenCV",
+      "C++",
+      "Python",
+      "Robotics"
+    ],
     "year": 2025,
     "venue": "University of Pennsylvania — ESE 615 (F1Tenth Autonomous Racing)",
     "paperUrl": "#",
     "codeUrl": "https://github.com/navjotschahal/vision_experiment_inteld435i_robo_racer",
-    "image": "",
-    "videoUrl": "",
-    "authors": ["Navjot Singh Chahal"]
+    "authors": [
+      "Navjot Singh Chahal"
+    ],
+    "media": []
   }
 ]

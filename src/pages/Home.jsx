@@ -48,6 +48,9 @@ export default function Home() {
           )}
         </div>
         <div className="home-intro">
+          <div className="home-badges">
+            <span className="badge-highlight">🏢 Ex UHG Optum Engineer</span>
+          </div>
           <h1>{aboutData.name}</h1>
           <h2>{aboutData.title}</h2>
           <p className="home-tagline">{aboutData.tagline}</p>

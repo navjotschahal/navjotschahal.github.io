@@ -1,3 +1,16 @@
+.badge-highlight {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  background: linear-gradient(90deg, #1a3a4a, #0d2230);
+  border: 1px solid rgba(126, 232, 250, 0.33);
+  border-radius: 20px;
+  color: #7ee8fa;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
 .page {
   max-width: 960px;
   margin: 0 auto;

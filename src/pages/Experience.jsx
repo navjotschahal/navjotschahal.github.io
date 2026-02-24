@@ -1,4 +1,5 @@
 import experienceData from '../data/experience.json';
+import MediaBlock from '../components/MediaBlock';
 import './PageCommon.css';
 import './Experience.css';
 
@@ -12,9 +13,13 @@ export default function Experience() {
           <div key={item.id} className="timeline-item">
             <div className="timeline-dot" />
             <div className="card">
+              <MediaBlock media={item.media} title={item.role} />
               <div className="card-body">
                 <div className="card-header-row">
                   <div>
+                    {item.badge && (
+                      <span className="badge-highlight">{item.badge}</span>
+                    )}
                     <h3 className="card-title">{item.role}</h3>
                     <p className="exp-company">{item.company} — <span className="exp-location">{item.location}</span></p>
                   </div>

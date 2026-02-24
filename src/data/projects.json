@@ -3,127 +3,171 @@
     "id": 1,
     "title": "Heterogeneous Computing Pipeline for Stream Compression",
     "description": "Engineered a custom FPGA kernel, CPU NEON intrinsics, and modified lookup table for hardware-level synthesis achieving state-of-the-art 135 Mbps per-thread throughput, horizontally scalable by number of cores and FPGA synthesis real estate.",
-    "tags": ["C++", "HLS", "FPGA", "OpenCL", "NEON Intrinsics", "SHA-256", "Vitis HLS"],
+    "tags": [
+      "C++",
+      "HLS",
+      "FPGA",
+      "OpenCL",
+      "NEON Intrinsics",
+      "SHA-256",
+      "Vitis HLS"
+    ],
     "status": "Completed",
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Lempel-Ziv-Welch custom kernel developed for FPGA synthesis",
       "Content-defined chunking (Gear hash table) with CPU NEON intrinsics",
       "NEON-accelerated SHA-256 on CPU",
       "C++ OpenCL kernel host programming for pipeline control with data-flow parallelism",
       "Achieved 135 Mbps per-thread throughput — limited only by number of cores and kernel synthesis real estate"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 2,
     "title": "Autonomous F1/10th Robot Racer Agent — High Performance",
     "description": "Full-stack autonomous racing system on the F1Tenth platform with LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS. Placed 2nd in University Competition.",
-    "tags": ["C++", "Python", "ROS2", "MPC", "SLAM", "LiDAR", "Jetson", "Robotics"],
+    "tags": [
+      "C++",
+      "Python",
+      "ROS2",
+      "MPC",
+      "SLAM",
+      "LiDAR",
+      "Jetson",
+      "Robotics"
+    ],
     "status": "Completed",
     "year": 2025,
     "githubUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Interfaced LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS",
       "Localization, navigation, sensing, RL, MPC, SLAM, Particle Filtering, Pure Pursuit — 2nd Rank University Competition",
       "NeRF-based 3D perception for localization and path planning POC using scene reconstruction",
       "Kinematic models using Cardan angles, curvature controllers, Kalman Filters, Markovian and optimization algorithms",
       "Middleware: scheduling for real-time systems, inter-process communication, and OS abstractions"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 3,
     "title": "Agentic AI Manager — Cross-Model Communication & Scaling (Akka)",
     "description": "Built an Akka Actor system for multimodal scale-up, inter-model communication, and empowering ML models with functional programming tools using Scala. Light Bend Akka challenge 2025.",
-    "tags": ["Scala", "Akka Actors", "Functional Programming", "Multi-Agent AI", "Concurrency"],
+    "tags": [
+      "Scala",
+      "Akka Actors",
+      "Functional Programming",
+      "Multi-Agent AI",
+      "Concurrency"
+    ],
     "status": "Completed",
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Akka Actor system manager for multimodal scale-up and inter-model communication",
       "Agent selector, load balancing, and actor-based asynchronous communication message protocol",
       "Demonstrated power of functional programming (Scala) in building modular frameworks for agentic abilities",
       "Manages clusters of various ML models for building cyber-intelligent systems achieving meaningful automation"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 4,
     "title": "RISC-V Microprocessor on Lattice FPGA",
     "description": "Built a RISC-V ISA-compliant microprocessor with multicycle, 5-stage pipelining, and a custom 8-stage Divider Module at University of Pennsylvania. Achieved 17.65 MHz clock speed with AXI4-Lite cache.",
-    "tags": ["RISC-V", "FPGA", "System Verilog", "Lattice", "Computer Architecture", "AXI4-Lite"],
+    "tags": [
+      "RISC-V",
+      "FPGA",
+      "System Verilog",
+      "Lattice",
+      "Computer Architecture",
+      "AXI4-Lite"
+    ],
     "status": "Completed",
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "RISC-V ISA-compliant microprocessor with multicycle and 5-stage pipelining",
       "Custom 8-stage Divider Module for optimizing DIV instructions",
       "Achieved 17.65 MHz clock speed with 4-stage AXI4-Lite cache",
       "Implemented on Lattice FPGA"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 5,
     "title": "Low-Light Image Enhancement using Transformer-Based Neural Network",
     "description": "Based on RetinexFormer, a transformer-based model with modified loss criterion achieving PSNR 22.7 and live video enhancement at 5 FPS. Further accelerated via quantization, pruning, and GPU acceleration.",
-    "tags": ["PyTorch", "Transformers", "RetinexFormer", "Image Enhancement", "CUDA", "Quantization"],
+    "tags": [
+      "PyTorch",
+      "Transformers",
+      "RetinexFormer",
+      "Image Enhancement",
+      "CUDA",
+      "Quantization"
+    ],
     "status": "Completed",
     "year": 2024,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Based on RetinexFormer transformer model with modifications to loss criterion",
       "Achieved PSNR of 22.7 and live video enhancement at 5 FPS",
       "Further accelerated using quantization, pruning, and vertical GPU acceleration (high-performance computing)"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 6,
     "title": "Deep Neural Network Model Compression using CSR",
     "description": "Engineered custom sparse linear layer and implemented model pruning, quantization, and hard pruning techniques to compress large-scale DNNs. Achieved 75% memory reduction in VGG16 (500+MB to 277MB).",
-    "tags": ["PyTorch", "DNN Compression", "Pruning", "Quantization", "CSR", "CUDA", "Apple MPS"],
+    "tags": [
+      "PyTorch",
+      "DNN Compression",
+      "Pruning",
+      "Quantization",
+      "CSR",
+      "CUDA",
+      "Apple MPS"
+    ],
     "status": "Completed",
     "year": 2024,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Custom sparse linear layer with model pruning, quantization, and hard pruning to compress large-scale DNNs",
       "75% reduction in memory footprint of VGG16 (500+MB to 277MB) while preserving inference accuracy",
       "Enables deployment on constrained edge platforms",
       "Comparative benchmarking: Apple Metal Performance Shaders (MPS) vs NVIDIA CUDA — throughput, latency, and portability"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 7,
     "title": "NSC Portfolio",
     "description": "A personal portfolio website built with React and Vite to showcase research, projects, and experience. Features dynamic JSON-driven content, media embeddings, and a responsive dark-theme design.",
-    "tags": ["React", "Vite", "JavaScript", "CSS", "React Router"],
+    "tags": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "CSS",
+      "React Router"
+    ],
     "status": "In Progress",
     "year": 2024,
     "githubUrl": "https://github.com/navjotschahal/nsc_portfolio",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "JSON-driven dynamic content — swap data without touching components",
       "Video and photo media per item",
       "Responsive dark-theme design",
       "Resume download and social links"
-    ]
+    ],
+    "media": []
   }
 ]

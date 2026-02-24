@@ -16,7 +16,7 @@ export default function Projects() {
       <div className="card-list">
         {projectsData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlock image={item.image} videoUrl={item.videoUrl} title={item.title} />
+            <MediaBlock media={item.media} title={item.title} />
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>
@@ -27,6 +27,7 @@ export default function Projects() {
                   ● {item.status}
                 </span>
               </div>
+              {item.badge && <span className="badge-highlight">{item.badge}</span>}
               <p className="card-desc">{item.description}</p>
               {item.highlights && item.highlights.length > 0 && (
                 <ul className="card-highlights">
