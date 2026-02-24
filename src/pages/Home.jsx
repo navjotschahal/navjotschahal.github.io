@@ -69,19 +69,19 @@ export default function Home() {
         <h3>What I Do</h3>
         <div className="highlights-grid">
           <div className="highlight-card">
-            <div className="highlight-icon">🔬</div>
-            <h4>Research</h4>
-            <p>Publishing at top venues in NLP, code intelligence, and ML systems.</p>
+            <div className="highlight-icon">🤖</div>
+            <h4>Robotics & Autonomous Systems</h4>
+            <p>Building autonomous vehicle controllers, computer vision pipelines, and control systems for F1Tenth racing platforms.</p>
           </div>
           <div className="highlight-card">
-            <div className="highlight-icon">🛠️</div>
-            <h4>Engineering</h4>
-            <p>Building scalable, production-grade software and distributed systems.</p>
+            <div className="highlight-icon">🧠</div>
+            <h4>Machine Learning & DNN</h4>
+            <p>Applying deep neural networks, convex optimization, and quantum algorithms to solve real-world engineering problems.</p>
           </div>
           <div className="highlight-card">
-            <div className="highlight-icon">📖</div>
-            <h4>Open Source</h4>
-            <p>Contributing to and maintaining open-source tools used by the community.</p>
+            <div className="highlight-icon">⚙️</div>
+            <h4>Backend Engineering</h4>
+            <p>Designing scalable backend services with Java (Spring Boot), Scala (Play), Node.js, and MEAN stack architectures.</p>
           </div>
         </div>
       </section>

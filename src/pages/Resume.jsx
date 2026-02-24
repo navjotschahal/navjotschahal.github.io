@@ -24,10 +24,10 @@ export default function Resume() {
           <h3>Skills</h3>
           <div className="skills-grid">
             {[
-              { category: 'Languages', items: ['Python', 'Go', 'JavaScript', 'TypeScript', 'C++'] },
-              { category: 'Frameworks', items: ['React', 'FastAPI', 'PyTorch', 'HuggingFace', 'Node.js'] },
-              { category: 'Infra / Cloud', items: ['Docker', 'Kubernetes', 'AWS', 'GCP', 'PostgreSQL', 'Redis'] },
-              { category: 'Research', items: ['NLP', 'LLMs', 'Reinforcement Learning', 'Code Intelligence'] },
+              { category: 'Languages', items: ['Python', 'Java', 'Scala', 'C++', 'JavaScript', 'TypeScript'] },
+              { category: 'Robotics & ML', items: ['ROS2', 'OpenCV', 'PyTorch', 'TensorRT', 'CVXPY', 'OSQP', 'YOLO'] },
+              { category: 'Backend', items: ['Spring Boot', 'Play Framework', 'Node.js', 'Express', 'Angular', 'React'] },
+              { category: 'Tools & Infra', items: ['MongoDB', 'Git', 'Jetson NX', 'ONNX', 'Linux', 'Docker'] },
             ].map((group) => (
               <div key={group.category} className="skill-group">
                 <h4>{group.category}</h4>
@@ -45,23 +45,23 @@ export default function Resume() {
             <div className="card-body">
               <div className="card-header-row">
                 <div>
-                  <h4 className="card-title">Bachelor of Computer Science</h4>
-                  <p className="edu-institution">University of Waterloo</p>
+                  <h4 className="card-title">Engineering — Robotics &amp; Autonomous Systems</h4>
+                  <p className="edu-institution">University of Pennsylvania</p>
                 </div>
-                <span className="card-year">2019 – 2024</span>
+                <span className="card-year">2024 – Present</span>
               </div>
-              <p className="card-desc">Specialization in Artificial Intelligence. Dean's Honour List.</p>
+              <p className="card-desc">Focus areas: Robotics, Control Systems, Machine Learning, Deep Neural Networks, Quantum Algorithms. Coursework includes ESE 615 (F1Tenth Autonomous Racing) and advanced ML.</p>
             </div>
           </div>
 
           <h3 className="resume-section-heading">Certifications &amp; Resources</h3>
           <div className="resources-list">
             {[
-              { name: 'Deep Learning Specialization — Coursera', url: '#' },
-              { name: 'AWS Certified Developer', url: '#' },
-              { name: 'Research Poster – ICSE 2024', url: '#' },
+              { name: 'Effective Scala — EPFL (Coursera)', url: 'https://github.com/navjotschahal/scala-json-coder' },
+              { name: 'Cracking the Coding Interview — Scala Solutions', url: 'https://github.com/navjotschahal/CtCI-6th-Edition-Scala' },
+              { name: 'MEAN Stack — Udemy (Maximilian Schwarzmüller)', url: 'https://github.com/navjotschahal/Posts-Proj-angular-MEAN-practice' },
             ].map((r) => (
-              <a key={r.name} href={r.url} className="resource-item" download={r.url !== '#'}>
+              <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="resource-item">
                 📎 {r.name}
               </a>
             ))}

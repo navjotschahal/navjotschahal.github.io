@@ -1,11 +1,11 @@
 {
   "name": "Navjot Singh Chahal",
-  "title": "Researcher & Software Engineer",
-  "tagline": "Building intelligent systems at the intersection of AI and Software Engineering.",
-  "bio": "I am a passionate researcher and software engineer with a focus on machine learning, natural language processing, and full-stack development. I enjoy solving complex problems and sharing my work with the world.",
-  "avatar": "",
-  "email": "navjotschahal@example.com",
-  "location": "Canada",
+  "title": "Engineer | Robotics & Autonomous Systems | ML & Backends",
+  "tagline": "Building intelligent systems at the intersection of robotics, machine learning, and scalable backend engineering.",
+  "bio": "I am an engineer at the University of Pennsylvania with a passion for robotics, autonomous systems, quantum algorithms, deep learning, and backend development. I enjoy working across the stack — from low-level control systems and computer vision on embedded hardware to scalable JVM and web backends in Java, Scala, and Node.js.",
+  "avatar": "https://avatars.githubusercontent.com/u/55528510?v=4",
+  "email": "navjotschahal@seas.upenn.edu",
+  "location": "United States",
   "resumeUrl": "/resume.pdf",
   "social": [
     {

@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "title": "Natural Language Processing for Code Understanding",
-    "description": "This research explores the application of transformer-based large language models to understand, summarize, and generate code across multiple programming languages.",
-    "abstract": "We present a novel approach using pre-trained language models fine-tuned on code corpora to perform downstream tasks including code summarization, bug detection, and automated test generation. Our experiments show state-of-the-art results on multiple benchmarks.",
-    "tags": ["NLP", "LLMs", "Code Intelligence", "Transformers"],
-    "year": 2024,
-    "venue": "International Conference on Software Engineering (ICSE)",
+    "title": "Model Predictive Control for F1Tenth Autonomous Racing",
+    "description": "Formulated and implemented a Model Predictive Control (MPC) controller for the F1Tenth 1/10th-scale autonomous racing platform. The controller uses convex optimization to generate optimal steering and acceleration inputs over a receding horizon.",
+    "abstract": "This work presents an MPC-based autonomous vehicle controller using a kinematic bicycle model with state space [x, y, θ, v]. We formulate a convex Quadratic Program (QP) minimizing trajectory deviation, input effort, and input rate of change subject to vehicle dynamic constraints. The continuous ODE is linearized via first-order Taylor expansion and discretized with Forward Euler, then solved at each timestep using CVXPY with the OSQP backend. The controller was validated in F1Tenth simulation and on a physical car in the Levine hallway at UPenn.",
+    "tags": ["Robotics", "Control Systems", "MPC", "Convex Optimization", "Autonomous Vehicles", "Python"],
+    "year": 2025,
+    "venue": "University of Pennsylvania — ESE 615 (F1Tenth Autonomous Racing)",
     "paperUrl": "#",
-    "codeUrl": "https://github.com/navjotschahal",
+    "codeUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
     "image": "",
     "videoUrl": "",
-    "authors": ["Navjot Singh Chahal", "Co-Author A", "Co-Author B"]
+    "authors": ["Navjot Singh Chahal"]
   },
   {
     "id": 2,
-    "title": "Reinforcement Learning for Adaptive Systems",
-    "description": "An investigation into reinforcement learning techniques for building adaptive software systems that improve over time based on user feedback and environmental signals.",
-    "abstract": "This paper presents a framework for integrating reinforcement learning into production software systems, enabling continuous self-optimization. We demonstrate its effectiveness on scheduling and resource allocation problems.",
-    "tags": ["Reinforcement Learning", "Adaptive Systems", "ML"],
-    "year": 2023,
-    "venue": "NeurIPS Workshop",
+    "title": "Computer Vision Pipeline for F1Tenth with Intel RealSense D435i",
+    "description": "Designed a complete computer vision pipeline for an autonomous F1Tenth racing car using an Intel RealSense D435i camera mounted on a Jetson NX. The pipeline covers camera calibration, ground-plane distance measurement, lane detection, and object detection.",
+    "abstract": "We built an integrated perception stack for an F1Tenth vehicle. Camera intrinsics were obtained via chessboard calibration (findChessboardCorners, calibrateCamera). Ground-plane distance estimation uses the calibrated intrinsic matrix and measured camera mounting height. Lane detection applies HSV color segmentation and contour-finding. A custom YOLO-like network was trained in PyTorch on a labeled F110 car dataset, converted to ONNX, and deployed via TensorRT 8.5 on the Jetson NX in both FP32 and FP16 modes. The full pipeline integrates all components to output detected lane boundaries and vehicle distances in real time at 60Hz.",
+    "tags": ["Computer Vision", "Deep Learning", "TensorRT", "YOLO", "OpenCV", "C++", "Python", "Robotics"],
+    "year": 2025,
+    "venue": "University of Pennsylvania — ESE 615 (F1Tenth Autonomous Racing)",
     "paperUrl": "#",
-    "codeUrl": "https://github.com/navjotschahal",
+    "codeUrl": "https://github.com/navjotschahal/vision_experiment_inteld435i_robo_racer",
     "image": "",
-    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "authors": ["Navjot Singh Chahal", "Co-Author C"]
+    "videoUrl": "",
+    "authors": ["Navjot Singh Chahal"]
   }
 ]

@@ -1,50 +1,53 @@
 [
   {
     "id": 1,
-    "role": "Software Engineer",
-    "company": "Tech Corp",
-    "location": "Toronto, Canada",
-    "type": "Full-time",
-    "startDate": "Jan 2024",
+    "role": "Graduate Student Researcher / Engineer",
+    "company": "University of Pennsylvania",
+    "location": "Philadelphia, PA, USA",
+    "type": "Academic",
+    "startDate": "2024",
     "endDate": "Present",
-    "description": "Working on large-scale distributed systems and ML infrastructure. Leading the development of internal tooling used by 200+ engineers.",
+    "description": "Pursuing graduate-level studies in engineering at UPenn with a focus on robotics, autonomous systems, and machine learning. Working on F1Tenth autonomous racing projects involving control systems, computer vision, and deep learning deployment on embedded hardware.",
     "highlights": [
-      "Designed and implemented a real-time data pipeline processing 1M+ events/day",
-      "Reduced model inference latency by 40% through optimization",
-      "Mentored 3 junior engineers"
+      "Implemented Model Predictive Control (MPC) for F1Tenth autonomous racing agent with CVXPY/OSQP",
+      "Built a full computer vision pipeline with Intel D435i: calibration, lane detection, and YOLO object detection via TensorRT on Jetson NX",
+      "Applied quantum algorithm concepts and deep neural network techniques in coursework and research",
+      "Strong coursework in Control Systems, Machine Learning, Robotics, and Distributed Systems"
     ],
-    "technologies": ["Go", "Python", "Kubernetes", "Apache Kafka", "PostgreSQL"]
+    "technologies": ["Python", "C++", "CVXPY", "OpenCV", "PyTorch", "TensorRT", "ROS2", "Jetson NX", "OSQP"]
   },
   {
     "id": 2,
-    "role": "Research Assistant",
-    "company": "University Research Lab",
-    "location": "Waterloo, Canada",
-    "type": "Part-time",
-    "startDate": "Sep 2022",
-    "endDate": "Dec 2023",
-    "description": "Conducted research on NLP and code intelligence. Published 2 papers at top-tier venues and contributed to open-source ML toolkits.",
+    "role": "Software Engineer (Backend)",
+    "company": "Industry / Practice Projects",
+    "location": "United States",
+    "type": "Full-time / Self-directed",
+    "startDate": "2021",
+    "endDate": "Present",
+    "description": "Designed and built backend services across Java, Scala, and Node.js ecosystems. Projects range from Fintech Spring Boot services to functional Scala Play apps and MEAN stack web applications.",
     "highlights": [
-      "Published research at ICSE 2024 and NeurIPS Workshop 2023",
-      "Developed novel benchmarks for code intelligence evaluation",
-      "Contributed to open-source NLP libraries"
+      "Built Fintech landing engine backend with Java Spring Boot (REST APIs, service layers)",
+      "Developed Healthcare Provider app using Scala Play Framework",
+      "Built MEAN stack full-stack app (Angular + Node.js + MongoDB) under expert mentorship",
+      "Studied enterprise JVM patterns and functional programming in Scala (EPFL Effective Scala, CtCI)"
     ],
-    "technologies": ["Python", "PyTorch", "HuggingFace", "CUDA", "Jupyter"]
+    "technologies": ["Java", "Spring Boot", "Scala", "Play Framework", "Node.js", "Express", "Angular", "TypeScript", "MongoDB"]
   },
   {
     "id": 3,
-    "role": "Software Engineering Intern",
-    "company": "Startup Inc.",
+    "role": "Full Stack Developer (Practice)",
+    "company": "Self-directed Projects",
     "location": "Remote",
-    "type": "Internship",
-    "startDate": "May 2022",
-    "endDate": "Aug 2022",
-    "description": "Built full-stack features for a B2B SaaS platform. Improved backend performance and redesigned key user-facing components.",
+    "type": "Self-directed",
+    "startDate": "2020",
+    "endDate": "2023",
+    "description": "Explored full-stack and backend development through multiple self-directed projects, covering URL shorteners, MEAN stack apps, and Scala backend services.",
     "highlights": [
-      "Reduced API response time by 60% through caching and query optimization",
-      "Delivered 5 end-to-end features from design to deployment",
-      "Worked in an agile team using 2-week sprint cycles"
+      "Built URL shortener service with Node.js, Express, and MongoDB Atlas",
+      "Completed MEAN stack application with Angular frontend and REST backend",
+      "Studied Cracking the Coding Interview (CtCI) algorithms in Scala",
+      "Explored EPFL Effective Scala course assignments (JSON codecs, functional patterns)"
     ],
-    "technologies": ["React", "Node.js", "TypeScript", "MongoDB", "AWS"]
+    "technologies": ["JavaScript", "Node.js", "MongoDB", "Angular", "TypeScript", "Scala", "REST APIs"]
   }
 ]

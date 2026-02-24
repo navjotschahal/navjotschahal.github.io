@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "NSC Portfolio",
-    "description": "A personal portfolio website built with React and Vite to showcase research, projects, and experience. Features dynamic JSON-driven content, media embeddings, and a responsive design.",
-    "tags": ["React", "Vite", "JavaScript", "CSS"],
+    "description": "A personal portfolio website built with React and Vite to showcase research, projects, and experience. Features dynamic JSON-driven content, media embeddings, and a responsive dark-theme design.",
+    "tags": ["React", "Vite", "JavaScript", "CSS", "React Router"],
     "status": "In Progress",
     "year": 2024,
     "githubUrl": "https://github.com/navjotschahal/nsc_portfolio",
@@ -11,46 +11,115 @@
     "image": "",
     "videoUrl": "",
     "highlights": [
-      "JSON-driven dynamic content",
+      "JSON-driven dynamic content — swap data without touching components",
       "Video and photo media per item",
-      "Responsive design",
-      "Resume download"
+      "Responsive dark-theme design",
+      "Resume download and social links"
     ]
   },
   {
     "id": 2,
-    "title": "AI Code Review Tool",
-    "description": "An automated code review system powered by large language models that provides meaningful feedback on pull requests, detecting bugs, style issues, and security vulnerabilities.",
-    "tags": ["Python", "LLMs", "GitHub API", "FastAPI"],
+    "title": "F1Tenth — Model Predictive Control (MPC) Agent",
+    "description": "A Model Predictive Control (MPC) controller for the F1Tenth autonomous racing platform. The agent linearizes and discretizes vehicle kinematics and solves a convex QP at each timestep using CVXPY/OSQP to track a reference trajectory.",
+    "tags": ["Python", "CVXPY", "OSQP", "Robotics", "Control Systems", "Autonomous Vehicles"],
     "status": "Completed",
-    "year": 2023,
-    "githubUrl": "https://github.com/navjotschahal",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "highlights": [
-      "Integrates with GitHub via webhooks",
-      "Uses GPT-4 for code analysis",
-      "REST API built with FastAPI",
-      "Supports Python, JavaScript, Go"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Distributed Task Scheduler",
-    "description": "A high-performance distributed task scheduling system built with Go that supports priority queues, cron-like scheduling, and fault tolerance.",
-    "tags": ["Go", "Distributed Systems", "Redis", "Docker"],
-    "status": "Completed",
-    "year": 2023,
-    "githubUrl": "https://github.com/navjotschahal",
+    "year": 2025,
+    "githubUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
     "liveUrl": "#",
     "image": "",
     "videoUrl": "",
     "highlights": [
-      "Handles 10k+ tasks/second",
-      "Fault-tolerant with Redis-backed state",
-      "Dockerized microservice architecture",
-      "Prometheus metrics integration"
+      "Kinematic bicycle model with state space [x, y, θ, v]",
+      "Forward Euler discretization and first-order Taylor linearization",
+      "Objective minimizes trajectory deviation, input effort, and input rate of change",
+      "Tested in F1Tenth simulation and on physical car in Levine hallway"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "F1Tenth — Vision Lab (Intel D435i Camera)",
+    "description": "Computer vision pipeline for the F1Tenth autonomous racing car using an Intel RealSense D435i camera. Implements camera calibration, distance measurement, lane detection, and object detection with TensorRT on Jetson NX.",
+    "tags": ["C++", "Python", "OpenCV", "TensorRT", "YOLO", "PyTorch", "ONNX", "Robotics"],
+    "status": "Completed",
+    "year": 2025,
+    "githubUrl": "https://github.com/navjotschahal/vision_experiment_inteld435i_robo_racer",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Camera calibration with OpenCV (chessboard, findChessboardCorners)",
+      "Distance measurement using camera intrinsic matrix and mounting height",
+      "Lane detection with HSV color space and contour finding",
+      "YOLO-based object detection trained in PyTorch, deployed via TensorRT on Jetson NX"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Fintech App — Spring Boot Backend",
+    "description": "A Fintech practice project built with Java and Spring Boot, implementing backend services for financial operations and landing engine logic.",
+    "tags": ["Java", "Spring Boot", "REST API", "Backend"],
+    "status": "Completed",
+    "year": 2023,
+    "githubUrl": "https://github.com/navjotschahal/myFintechProjectSpringBoot",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Java Spring Boot REST backend",
+      "Landing engine module for financial processing",
+      "Practice project for enterprise Java patterns"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "URL Shortener — Node.js & MongoDB",
+    "description": "A URL shortener service built from scratch to learn URL shortening fundamentals using Node.js and MongoDB Atlas.",
+    "tags": ["JavaScript", "Node.js", "MongoDB", "Express"],
+    "status": "Completed",
+    "year": 2021,
+    "githubUrl": "https://github.com/navjotschahal/nsc_url_shortify",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Full-stack Node.js + Express backend",
+      "MongoDB Atlas for persistent short-link storage",
+      "Short code generation and redirect handling"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Healthcare Provider App — Scala & Play",
+    "description": "A healthcare provider web application built with the Scala Play Framework as a practice project for functional backend development.",
+    "tags": ["Scala", "Play Framework", "Functional Programming", "Backend"],
+    "status": "Completed",
+    "year": 2022,
+    "githubUrl": "https://github.com/navjotschahal/nscHealthCareProvider",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Built with Scala Play Framework",
+      "Explores functional programming patterns for web backends",
+      "Healthcare provider data management"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "MEAN Stack Posts App — Angular",
+    "description": "A full-stack posts application built with the MEAN stack (MongoDB, Express, Angular, Node.js) under the mentorship of Maximilian Schwarzmüller.",
+    "tags": ["TypeScript", "Angular", "Node.js", "MongoDB", "Express", "MEAN Stack"],
+    "status": "Completed",
+    "year": 2022,
+    "githubUrl": "https://github.com/navjotschahal/Posts-Proj-angular-MEAN-practice",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Angular frontend with TypeScript",
+      "Node.js + Express REST API backend",
+      "MongoDB for data persistence",
+      "GitHub Pages deployment"
     ]
   }
 ]
