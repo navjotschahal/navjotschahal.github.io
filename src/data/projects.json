@@ -1,6 +1,115 @@
 [
   {
     "id": 1,
+    "title": "Heterogeneous Computing Pipeline for Stream Compression",
+    "description": "Engineered a custom FPGA kernel, CPU NEON intrinsics, and modified lookup table for hardware-level synthesis achieving state-of-the-art 135 Mbps per-thread throughput, horizontally scalable by number of cores and FPGA synthesis real estate.",
+    "tags": ["C++", "HLS", "FPGA", "OpenCL", "NEON Intrinsics", "SHA-256", "Vitis HLS"],
+    "status": "Completed",
+    "year": 2025,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Lempel-Ziv-Welch custom kernel developed for FPGA synthesis",
+      "Content-defined chunking (Gear hash table) with CPU NEON intrinsics",
+      "NEON-accelerated SHA-256 on CPU",
+      "C++ OpenCL kernel host programming for pipeline control with data-flow parallelism",
+      "Achieved 135 Mbps per-thread throughput — limited only by number of cores and kernel synthesis real estate"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Autonomous F1/10th Robot Racer Agent — High Performance",
+    "description": "Full-stack autonomous racing system on the F1Tenth platform with LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS. Placed 2nd in University Competition.",
+    "tags": ["C++", "Python", "ROS2", "MPC", "SLAM", "LiDAR", "Jetson", "Robotics"],
+    "status": "Completed",
+    "year": 2025,
+    "githubUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Interfaced LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS",
+      "Localization, navigation, sensing, RL, MPC, SLAM, Particle Filtering, Pure Pursuit — 2nd Rank University Competition",
+      "NeRF-based 3D perception for localization and path planning POC using scene reconstruction",
+      "Kinematic models using Cardan angles, curvature controllers, Kalman Filters, Markovian and optimization algorithms",
+      "Middleware: scheduling for real-time systems, inter-process communication, and OS abstractions"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Agentic AI Manager — Cross-Model Communication & Scaling (Akka)",
+    "description": "Built an Akka Actor system for multimodal scale-up, inter-model communication, and empowering ML models with functional programming tools using Scala. Light Bend Akka challenge 2025.",
+    "tags": ["Scala", "Akka Actors", "Functional Programming", "Multi-Agent AI", "Concurrency"],
+    "status": "Completed",
+    "year": 2025,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Akka Actor system manager for multimodal scale-up and inter-model communication",
+      "Agent selector, load balancing, and actor-based asynchronous communication message protocol",
+      "Demonstrated power of functional programming (Scala) in building modular frameworks for agentic abilities",
+      "Manages clusters of various ML models for building cyber-intelligent systems achieving meaningful automation"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "RISC-V Microprocessor on Lattice FPGA",
+    "description": "Built a RISC-V ISA-compliant microprocessor with multicycle, 5-stage pipelining, and a custom 8-stage Divider Module at University of Pennsylvania. Achieved 17.65 MHz clock speed with AXI4-Lite cache.",
+    "tags": ["RISC-V", "FPGA", "System Verilog", "Lattice", "Computer Architecture", "AXI4-Lite"],
+    "status": "Completed",
+    "year": 2025,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "RISC-V ISA-compliant microprocessor with multicycle and 5-stage pipelining",
+      "Custom 8-stage Divider Module for optimizing DIV instructions",
+      "Achieved 17.65 MHz clock speed with 4-stage AXI4-Lite cache",
+      "Implemented on Lattice FPGA"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Low-Light Image Enhancement using Transformer-Based Neural Network",
+    "description": "Based on RetinexFormer, a transformer-based model with modified loss criterion achieving PSNR 22.7 and live video enhancement at 5 FPS. Further accelerated via quantization, pruning, and GPU acceleration.",
+    "tags": ["PyTorch", "Transformers", "RetinexFormer", "Image Enhancement", "CUDA", "Quantization"],
+    "status": "Completed",
+    "year": 2024,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Based on RetinexFormer transformer model with modifications to loss criterion",
+      "Achieved PSNR of 22.7 and live video enhancement at 5 FPS",
+      "Further accelerated using quantization, pruning, and vertical GPU acceleration (high-performance computing)"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Deep Neural Network Model Compression using CSR",
+    "description": "Engineered custom sparse linear layer and implemented model pruning, quantization, and hard pruning techniques to compress large-scale DNNs. Achieved 75% memory reduction in VGG16 (500+MB to 277MB).",
+    "tags": ["PyTorch", "DNN Compression", "Pruning", "Quantization", "CSR", "CUDA", "Apple MPS"],
+    "status": "Completed",
+    "year": 2024,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Custom sparse linear layer with model pruning, quantization, and hard pruning to compress large-scale DNNs",
+      "75% reduction in memory footprint of VGG16 (500+MB to 277MB) while preserving inference accuracy",
+      "Enables deployment on constrained edge platforms",
+      "Comparative benchmarking: Apple Metal Performance Shaders (MPS) vs NVIDIA CUDA — throughput, latency, and portability"
+    ]
+  },
+  {
+    "id": 7,
     "title": "NSC Portfolio",
     "description": "A personal portfolio website built with React and Vite to showcase research, projects, and experience. Features dynamic JSON-driven content, media embeddings, and a responsive dark-theme design.",
     "tags": ["React", "Vite", "JavaScript", "CSS", "React Router"],
@@ -15,111 +124,6 @@
       "Video and photo media per item",
       "Responsive dark-theme design",
       "Resume download and social links"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "F1Tenth — Model Predictive Control (MPC) Agent",
-    "description": "A Model Predictive Control (MPC) controller for the F1Tenth autonomous racing platform. The agent linearizes and discretizes vehicle kinematics and solves a convex QP at each timestep using CVXPY/OSQP to track a reference trajectory.",
-    "tags": ["Python", "CVXPY", "OSQP", "Robotics", "Control Systems", "Autonomous Vehicles"],
-    "status": "Completed",
-    "year": 2025,
-    "githubUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "highlights": [
-      "Kinematic bicycle model with state space [x, y, θ, v]",
-      "Forward Euler discretization and first-order Taylor linearization",
-      "Objective minimizes trajectory deviation, input effort, and input rate of change",
-      "Tested in F1Tenth simulation and on physical car in Levine hallway"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "F1Tenth — Vision Lab (Intel D435i Camera)",
-    "description": "Computer vision pipeline for the F1Tenth autonomous racing car using an Intel RealSense D435i camera. Implements camera calibration, distance measurement, lane detection, and object detection with TensorRT on Jetson NX.",
-    "tags": ["C++", "Python", "OpenCV", "TensorRT", "YOLO", "PyTorch", "ONNX", "Robotics"],
-    "status": "Completed",
-    "year": 2025,
-    "githubUrl": "https://github.com/navjotschahal/vision_experiment_inteld435i_robo_racer",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "highlights": [
-      "Camera calibration with OpenCV (chessboard, findChessboardCorners)",
-      "Distance measurement using camera intrinsic matrix and mounting height",
-      "Lane detection with HSV color space and contour finding",
-      "YOLO-based object detection trained in PyTorch, deployed via TensorRT on Jetson NX"
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Fintech App — Spring Boot Backend",
-    "description": "A Fintech practice project built with Java and Spring Boot, implementing backend services for financial operations and landing engine logic.",
-    "tags": ["Java", "Spring Boot", "REST API", "Backend"],
-    "status": "Completed",
-    "year": 2023,
-    "githubUrl": "https://github.com/navjotschahal/myFintechProjectSpringBoot",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "highlights": [
-      "Java Spring Boot REST backend",
-      "Landing engine module for financial processing",
-      "Practice project for enterprise Java patterns"
-    ]
-  },
-  {
-    "id": 5,
-    "title": "URL Shortener — Node.js & MongoDB",
-    "description": "A URL shortener service built from scratch to learn URL shortening fundamentals using Node.js and MongoDB Atlas.",
-    "tags": ["JavaScript", "Node.js", "MongoDB", "Express"],
-    "status": "Completed",
-    "year": 2021,
-    "githubUrl": "https://github.com/navjotschahal/nsc_url_shortify",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "highlights": [
-      "Full-stack Node.js + Express backend",
-      "MongoDB Atlas for persistent short-link storage",
-      "Short code generation and redirect handling"
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Healthcare Provider App — Scala & Play",
-    "description": "A healthcare provider web application built with the Scala Play Framework as a practice project for functional backend development.",
-    "tags": ["Scala", "Play Framework", "Functional Programming", "Backend"],
-    "status": "Completed",
-    "year": 2022,
-    "githubUrl": "https://github.com/navjotschahal/nscHealthCareProvider",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "highlights": [
-      "Built with Scala Play Framework",
-      "Explores functional programming patterns for web backends",
-      "Healthcare provider data management"
-    ]
-  },
-  {
-    "id": 7,
-    "title": "MEAN Stack Posts App — Angular",
-    "description": "A full-stack posts application built with the MEAN stack (MongoDB, Express, Angular, Node.js) under the mentorship of Maximilian Schwarzmüller.",
-    "tags": ["TypeScript", "Angular", "Node.js", "MongoDB", "Express", "MEAN Stack"],
-    "status": "Completed",
-    "year": 2022,
-    "githubUrl": "https://github.com/navjotschahal/Posts-Proj-angular-MEAN-practice",
-    "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
-    "highlights": [
-      "Angular frontend with TypeScript",
-      "Node.js + Express REST API backend",
-      "MongoDB for data persistence",
-      "GitHub Pages deployment"
     ]
   }
 ]
