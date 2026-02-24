@@ -1,0 +1,32 @@
+{
+  "name": "Navjot Singh Chahal",
+  "title": "Engineer | Robotics & Autonomous Systems | ML & Backends",
+  "tagline": "Building intelligent systems at the intersection of robotics, machine learning, and scalable backend engineering.",
+  "bio": "I am an engineer at the University of Pennsylvania with a passion for robotics, autonomous systems, quantum algorithms, deep learning, and backend development. I enjoy working across the stack — from low-level control systems and computer vision on embedded hardware to scalable JVM and web backends in Java, Scala, and Node.js.",
+  "avatar": "https://avatars.githubusercontent.com/u/55528510?v=4",
+  "email": "navjotschahal@seas.upenn.edu",
+  "location": "United States",
+  "resumeUrl": "/resume.pdf",
+  "social": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/navjotschahal",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/navjotschahal",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/navjotschahal",
+      "icon": "twitter"
+    },
+    {
+      "platform": "Google Scholar",
+      "url": "https://scholar.google.com",
+      "icon": "scholar"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #f0f0f0;
+  margin: 0 0 0.4rem;
+}
+
+.page-subtitle {
+  color: #888;
+  font-size: 0.97rem;
+  margin: 0 0 2rem;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: #7ee8fa44;
+  transform: translateY(-2px);
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.card-year {
+  font-size: 0.85rem;
+  color: #888;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-status {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-venue {
+  font-size: 0.9rem;
+  color: #7ee8fa;
+  margin: 0 0 0.2rem;
+}
+
+.card-authors {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+.card-desc {
+  font-size: 0.93rem;
+  color: #bbb;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+.card-highlights {
+  margin: 0 0 0.75rem 1.1rem;
+  padding: 0;
+}
+
+.card-highlights li {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.card-abstract {
+  margin-bottom: 0.75rem;
+}
+
+.card-abstract summary {
+  font-size: 0.88rem;
+  color: #7ee8fa;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.4rem;
+}
+
+.card-abstract p {
+  font-size: 0.88rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0.4rem 0 0;
+  padding-left: 0.5rem;
+  border-left: 2px solid #2a2a2a;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: #aaa;
+}
+
+.card-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: #1a3a4a;
+  color: #7ee8fa;
+  border: 1px solid #2a5a6a;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.link-btn:hover {
+  background: #1e4a5a;
+  border-color: #7ee8fa;
+}
