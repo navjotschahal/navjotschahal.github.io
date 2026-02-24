@@ -186,3 +186,124 @@
     justify-content: center;
   }
 }
+
+/* Section previews on home page */
+.home-section-preview {
+  margin-top: 3rem;
+}
+
+.section-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-preview-header h3 {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.see-all-link {
+  font-size: 0.9rem;
+  color: #7ee8fa;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.see-all-link:hover {
+  opacity: 0.75;
+}
+
+.preview-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+}
+
+.preview-card {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.preview-card:hover {
+  border-color: #7ee8fa44;
+  transform: translateY(-3px);
+}
+
+.preview-card-body {
+  padding: 1.25rem;
+}
+
+.preview-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.preview-card-top h4 {
+  font-size: 0.97rem;
+  color: #f0f0f0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Resume preview block */
+.resume-preview-block {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.resume-dl-mini {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume-dl-mini span:first-child {
+  font-size: 2rem;
+}
+
+.resume-dl-mini strong {
+  color: #f0f0f0;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.resume-dl-mini p {
+  font-size: 0.88rem;
+  color: #888;
+  margin: 0;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 0.4rem;
+}
+
+.exp-location {
+  color: #777;
+}
+
+@media (max-width: 480px) {
+  .resume-dl-mini {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-dl-mini .btn-resume {
+    margin-left: 0 !important;
+  }
+}

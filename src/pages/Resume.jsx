@@ -24,10 +24,11 @@ export default function Resume() {
           <h3>Skills</h3>
           <div className="skills-grid">
             {[
-              { category: 'Languages', items: ['Python', 'Java', 'Scala', 'C++', 'JavaScript', 'TypeScript'] },
-              { category: 'Robotics & ML', items: ['ROS2', 'OpenCV', 'PyTorch', 'TensorRT', 'CVXPY', 'OSQP', 'YOLO'] },
-              { category: 'Backend', items: ['Spring Boot', 'Play Framework', 'Node.js', 'Express', 'Angular', 'React'] },
-              { category: 'Tools & Infra', items: ['MongoDB', 'Git', 'Jetson NX', 'ONNX', 'Linux', 'Docker'] },
+              { category: 'Languages', items: ['C', 'C++', 'CUDA', 'Python', 'Bash', 'Scala', 'Java', 'MATLAB', 'SystemVerilog'] },
+              { category: 'Frameworks', items: ['ROS2', 'PyTorch', 'TensorFlow', 'Keras', 'TensorRT', 'OpenCV', 'OpenCL'] },
+              { category: 'Tools', items: ['NVIDIA Jetson', 'Isaac Sim/Gym', 'RViz', 'Docker', 'Git', 'Linux', 'GDB', 'Vitis HLS'] },
+              { category: 'Embedded / Robotics', items: ['LiDAR', 'Depth Camera', 'IMU', 'Radar', 'MPC', 'SLAM', 'Localization', 'RTOS', 'Xilinx FPGA'] },
+              { category: 'Concepts', items: ['Deep Neural Networks', 'Image Processing', 'Physics Simulation', 'Thread/Process/Memory Sync', 'Optimization', 'Cloud (Azure, AWS, Docker)'] },
             ].map((group) => (
               <div key={group.category} className="skill-group">
                 <h4>{group.category}</h4>
@@ -45,12 +46,24 @@ export default function Resume() {
             <div className="card-body">
               <div className="card-header-row">
                 <div>
-                  <h4 className="card-title">Engineering — Robotics &amp; Autonomous Systems</h4>
-                  <p className="edu-institution">University of Pennsylvania</p>
+                  <h4 className="card-title">Master of Science — Electrical Engineering (SEAS)</h4>
+                  <p className="edu-institution">University of Pennsylvania, Philadelphia, PA, USA</p>
                 </div>
-                <span className="card-year">2024 – Present</span>
+                <span className="card-year">2024 – Jun 2026</span>
               </div>
-              <p className="card-desc">Focus areas: Robotics, Control Systems, Machine Learning, Deep Neural Networks, Quantum Algorithms. Coursework includes ESE 615 (F1Tenth Autonomous Racing) and advanced ML.</p>
+              <p className="card-desc">GPA: 3.49 / 4.0 · Focus: Robotics, Autonomous Systems, Machine Learning, Deep Neural Networks, Quantum Algorithms, FPGA & Embedded Systems.</p>
+            </div>
+          </div>
+          <div className="card" style={{ marginTop: '0.75rem' }}>
+            <div className="card-body">
+              <div className="card-header-row">
+                <div>
+                  <h4 className="card-title">Bachelor of Technology — Electronics &amp; Communications Engineering</h4>
+                  <p className="edu-institution">Kurukshetra University, Kurukshetra, India</p>
+                </div>
+                <span className="card-year">Jun 2019</span>
+              </div>
+              <p className="card-desc">GPA: 4.0 / 4.0</p>
             </div>
           </div>
 

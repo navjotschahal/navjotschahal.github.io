@@ -1,53 +1,114 @@
 [
   {
     "id": 1,
-    "role": "Graduate Student Researcher / Engineer",
+    "role": "Research Assistant — Figueroa GRASP Lab",
     "company": "University of Pennsylvania",
     "location": "Philadelphia, PA, USA",
     "type": "Academic",
-    "startDate": "2024",
+    "startDate": "Jan 2026",
     "endDate": "Present",
-    "description": "Pursuing graduate-level studies in engineering at UPenn with a focus on robotics, autonomous systems, and machine learning. Working on F1Tenth autonomous racing projects involving control systems, computer vision, and deep learning deployment on embedded hardware.",
+    "description": "Independent study on proprioception sensory awareness in robots for low-level control, aiding exteroception sensory like vision and active sensors. Inspired by the human muscle system.",
     "highlights": [
-      "Implemented Model Predictive Control (MPC) for F1Tenth autonomous racing agent with CVXPY/OSQP",
-      "Built a full computer vision pipeline with Intel D435i: calibration, lane detection, and YOLO object detection via TensorRT on Jetson NX",
-      "Applied quantum algorithm concepts and deep neural network techniques in coursework and research",
-      "Strong coursework in Control Systems, Machine Learning, Robotics, and Distributed Systems"
+      "Building manufacturer-agnostic data acquisition libraries in C++ and Python for proprioceptive sensing",
+      "Modelling environmental awareness for PyBullet simulators and Franka robot arms",
+      "Building inference characteristics on current/torque relationships, designing models for auto-tuning on any platform"
     ],
-    "technologies": ["Python", "C++", "CVXPY", "OpenCV", "PyTorch", "TensorRT", "ROS2", "Jetson NX", "OSQP"]
+    "technologies": ["C++", "Python", "PyBullet", "ROS2", "Franka", "Control Systems"]
   },
   {
     "id": 2,
-    "role": "Software Engineer (Backend)",
-    "company": "Industry / Practice Projects",
-    "location": "United States",
-    "type": "Full-time / Self-directed",
-    "startDate": "2021",
+    "role": "Research Assistant — Mod Lab",
+    "company": "University of Pennsylvania",
+    "location": "Philadelphia, PA, USA",
+    "type": "Academic",
+    "startDate": "Aug 2025",
     "endDate": "Present",
-    "description": "Designed and built backend services across Java, Scala, and Node.js ecosystems. Projects range from Fintech Spring Boot services to functional Scala Play apps and MEAN stack web applications.",
+    "description": "Developing string actuators for a modular robotic platform (Abott). Working on multi-agent systems for cognitive task perception and motor control.",
     "highlights": [
-      "Built Fintech landing engine backend with Java Spring Boot (REST APIs, service layers)",
-      "Developed Healthcare Provider app using Scala Play Framework",
-      "Built MEAN stack full-stack app (Angular + Node.js + MongoDB) under expert mentorship",
-      "Studied enterprise JVM patterns and functional programming in Scala (EPFL Effective Scala, CtCI)"
+      "Developing string actuators for the modular robotic platform Abott",
+      "Defining scope of multi-agent system for analysis of proprioceptive actuator data for task cognitive perception",
+      "Reinforcing motor control or mutating physical agent configuration as independent Agents"
     ],
-    "technologies": ["Java", "Spring Boot", "Scala", "Play Framework", "Node.js", "Express", "Angular", "TypeScript", "MongoDB"]
+    "technologies": ["Robotics", "Multi-Agent Systems", "Actuators", "C++", "Python"]
   },
   {
     "id": 3,
-    "role": "Full Stack Developer (Practice)",
-    "company": "Self-directed Projects",
-    "location": "Remote",
-    "type": "Self-directed",
-    "startDate": "2020",
-    "endDate": "2023",
-    "description": "Explored full-stack and backend development through multiple self-directed projects, covering URL shorteners, MEAN stack apps, and Scala backend services.",
+    "role": "Teaching & Research Assistant — ESE 5090 QHEL Lab",
+    "company": "University of Pennsylvania",
+    "location": "Philadelphia, PA, USA",
+    "type": "Academic",
+    "startDate": "Aug 2025",
+    "endDate": "Dec 2025",
+    "description": "Developed interactive Python notebooks for experimental validation of quantum gates on IBM quantum devices. Engineered quantum control apparatus for spin manipulation.",
     "highlights": [
-      "Built URL shortener service with Node.js, Express, and MongoDB Atlas",
-      "Completed MEAN stack application with Angular frontend and REST backend",
-      "Studied Cracking the Coding Interview (CtCI) algorithms in Scala",
-      "Explored EPFL Effective Scala course assignments (JSON codecs, functional patterns)"
+      "Developed interactive Python notebook for quantum gate experimental validations on IBM Cloud devices",
+      "Implemented Grover's, Shor's, Quantum Fourier Transform, Bernstein-Vazirani, Simon's Algorithms, and Quantum Cryptography",
+      "Engineered quantum control apparatus using Digital Programmable Function Generator Moku-go for arbitrary function generation and quantum spin control (Hydrogen proton NMR)"
     ],
-    "technologies": ["JavaScript", "Node.js", "MongoDB", "Angular", "TypeScript", "Scala", "REST APIs"]
+    "technologies": ["Python", "Qiskit", "IBM Quantum", "Moku-go", "Quantum Algorithms", "NMR"]
+  },
+  {
+    "id": 4,
+    "role": "Teaching Assistant — ESE 5180 IoT Wireless, Security & Scaling",
+    "company": "University of Pennsylvania",
+    "location": "Philadelphia, PA, USA",
+    "type": "Academic",
+    "startDate": "Aug 2025",
+    "endDate": "Dec 2025",
+    "description": "Mentored student teams in IoT edge system development with Nordic semiconductors, low-energy communications, and embedded firmware.",
+    "highlights": [
+      "IoT edge scaling with Nordic semiconductors — CMake build systems, LoRa, BLE, NFC firmware",
+      "Mentoring teams of 4 students in developing and securing guidance from external partners in academia and industry",
+      "Guiding teams toward developing and securing embedded products and solutions"
+    ],
+    "technologies": ["Nordic nRF", "LoRa", "BLE", "NFC", "CMake", "Embedded C", "RTOS"]
+  },
+  {
+    "id": 5,
+    "role": "Lead Robotics Teacher",
+    "company": "SMP (Summer Mentorship Program)",
+    "location": "Philadelphia, PA, USA",
+    "type": "Teaching",
+    "startDate": "May 2025",
+    "endDate": "Aug 2025",
+    "description": "Deployed optimization and ML-based control techniques on the XRP Pi for 20 selected students from across the US. Developed custom training modules and control infrastructure.",
+    "highlights": [
+      "Deployed optimization and ML-based control techniques on XRP Pi — robotic arm prehension and sensory cyber-physical integrations",
+      "All modules custom-built for 20 selected students from across the US",
+      "Developed control infrastructure using embedded Linux (Jetson Nano, Raspberry Pi) for real-time manipulation tasks on a Castor Bot"
+    ],
+    "technologies": ["Python", "Raspberry Pi", "Jetson Nano", "ROS", "Embedded Linux", "ML Control"]
+  },
+  {
+    "id": 6,
+    "role": "Software Engineer — Fortune 5 CTO Acceleration Team",
+    "company": "UHG Optum",
+    "location": "India",
+    "type": "Full-time",
+    "startDate": "Mar 2022",
+    "endDate": "Jul 2024",
+    "description": "Worked in Scala 3 / Play 2.8 backend using functional programming and immutability to transform large data streams via Akka Actors for managing multithreading across ingesting systems.",
+    "highlights": [
+      "Scala 3 Play 2.8 back-end with functional programming and immutability — transforming large data streams via Akka Actors",
+      "Built Optum proprietary common versioning system library packaged as Ivy and Maven for tool configurations",
+      "Library supports export, import, and backup from AWS buckets and an extensible abstract class for any database system"
+    ],
+    "technologies": ["Scala 3", "Play 2.8", "Akka Actors", "Functional Programming", "AWS S3", "Ivy", "Maven"]
+  },
+  {
+    "id": 7,
+    "role": "Software Engineer",
+    "company": "HCL Technologies",
+    "location": "India",
+    "type": "Full-time",
+    "startDate": "Jul 2019",
+    "endDate": "Mar 2022",
+    "description": "Developed Spring Boot-based embedded I/O control and NLP pipelines for industrial-grade document automation. Integrated ML engines for cheque review automation.",
+    "highlights": [
+      "Developed Spring Boot-based embedded I/O control and NLP pipelines for industrial-grade document automation",
+      "Performed POC for TWAIN-based web scanning using third-party library; integrated Printer/Scanner I/O peripherals using Java and Azure",
+      "Integrated NLP-based handwriting recognition ML engine (Transformers) to automate Deutsche Bank international cheque review — improving accuracy 48×"
+    ],
+    "technologies": ["Java", "Spring Boot", "NLP", "Transformers", "Azure", "TWAIN", "REST APIs"]
   }
 ]

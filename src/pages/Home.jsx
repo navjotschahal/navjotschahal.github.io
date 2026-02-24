@@ -1,4 +1,9 @@
+import { Link } from 'react-router-dom';
 import aboutData from '../data/about.json';
+import researchData from '../data/research.json';
+import projectsData from '../data/projects.json';
+import experienceData from '../data/experience.json';
+import './PageCommon.css';
 import './Home.css';
 
 const iconMap = {
@@ -24,9 +29,16 @@ const iconMap = {
   ),
 };
 
+const statusColors = {
+  'Completed': '#4caf50',
+  'In Progress': '#ff9800',
+  'Archived': '#9e9e9e',
+};
+
 export default function Home() {
   return (
     <div className="home-page">
+      {/* ── HERO ── */}
       <div className="home-hero">
         <div className="home-avatar-placeholder">
           {aboutData.avatar ? (
@@ -43,6 +55,7 @@ export default function Home() {
           <div className="home-meta">
             <span>📍 {aboutData.location}</span>
             <span>✉️ <a href={`mailto:${aboutData.email}`}>{aboutData.email}</a></span>
+            {aboutData.phone && <span>📞 {aboutData.phone}</span>}
           </div>
           <div className="home-social">
             {aboutData.social.map((s) => (
@@ -65,23 +78,146 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ── WHAT I DO ── */}
       <section className="home-highlights">
         <h3>What I Do</h3>
         <div className="highlights-grid">
           <div className="highlight-card">
             <div className="highlight-icon">🤖</div>
             <h4>Robotics & Autonomous Systems</h4>
-            <p>Building autonomous vehicle controllers, computer vision pipelines, and control systems for F1Tenth racing platforms.</p>
+            <p>Proprioception sensing, MPC, SLAM, NeRF 3D perception, LiDAR/depth pipelines on NVIDIA Jetson with ROS2.</p>
           </div>
           <div className="highlight-card">
-            <div className="highlight-icon">🧠</div>
-            <h4>Machine Learning & DNN</h4>
-            <p>Applying deep neural networks, convex optimization, and quantum algorithms to solve real-world engineering problems.</p>
+            <div className="highlight-icon">⚡</div>
+            <h4>Heterogeneous Computing & FPGA</h4>
+            <p>Custom FPGA kernels (Vitis HLS), CPU NEON intrinsics, OpenCL pipelines, RISC-V microprocessor design on Lattice FPGA.</p>
+          </div>
+          <div className="highlight-card">
+            <div className="highlight-icon">��</div>
+            <h4>ML / DNN & Quantum</h4>
+            <p>DNN compression (pruning, quantization), transformer-based image enhancement, quantum algorithms on IBM hardware (Grover, Shor, QFT).</p>
           </div>
           <div className="highlight-card">
             <div className="highlight-icon">⚙️</div>
-            <h4>Backend Engineering</h4>
-            <p>Designing scalable backend services with Java (Spring Boot), Scala (Play), Node.js, and MEAN stack architectures.</p>
+            <h4>Backend & Distributed Systems</h4>
+            <p>Scala/Akka Actor systems for agentic AI, Java Spring Boot NLP automation, functional programming at UHG Optum Fortune-5 scale.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── RESEARCH PREVIEW ── */}
+      <section className="home-section-preview">
+        <div className="section-preview-header">
+          <h3>Research</h3>
+          <Link to="/research" className="see-all-link">See all →</Link>
+        </div>
+        <div className="preview-card-list">
+          {researchData.slice(0, 3).map((item) => (
+            <div key={item.id} className="preview-card">
+              <div className="preview-card-body">
+                <div className="preview-card-top">
+                  <h4>{item.title}</h4>
+                  <span className="card-year">{item.year}</span>
+                </div>
+                <p className="card-venue">{item.venue}</p>
+                <p className="card-desc">{item.description}</p>
+                <div className="tag-list">
+                  {item.tags.slice(0, 5).map((tag) => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+                <div className="card-links">
+                  {item.codeUrl && item.codeUrl !== '#' && (
+                    <a href={item.codeUrl} target="_blank" rel="noopener noreferrer" className="link-btn">💻 Code</a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── PROJECTS PREVIEW ── */}
+      <section className="home-section-preview">
+        <div className="section-preview-header">
+          <h3>Projects</h3>
+          <Link to="/projects" className="see-all-link">See all →</Link>
+        </div>
+        <div className="preview-card-list">
+          {projectsData.slice(0, 3).map((item) => (
+            <div key={item.id} className="preview-card">
+              <div className="preview-card-body">
+                <div className="preview-card-top">
+                  <h4>{item.title}</h4>
+                  <span className="card-status" style={{ color: statusColors[item.status] || '#ccc' }}>
+                    ● {item.status}
+                  </span>
+                </div>
+                <p className="card-desc">{item.description}</p>
+                <div className="tag-list">
+                  {item.tags.slice(0, 5).map((tag) => (
+                    <span key={tag} className="tag">{tag}</span>
+                  ))}
+                </div>
+                <div className="card-links">
+                  {item.githubUrl && item.githubUrl !== '#' && (
+                    <a href={item.githubUrl} target="_blank" rel="noopener noreferrer" className="link-btn">💻 GitHub</a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── EXPERIENCE PREVIEW ── */}
+      <section className="home-section-preview">
+        <div className="section-preview-header">
+          <h3>Experience</h3>
+          <Link to="/experience" className="see-all-link">See all →</Link>
+        </div>
+        <div className="preview-card-list">
+          {experienceData.slice(0, 3).map((item) => (
+            <div key={item.id} className="preview-card">
+              <div className="preview-card-body">
+                <div className="preview-card-top">
+                  <h4>{item.role}</h4>
+                  <span className="card-year">{item.startDate} – {item.endDate}</span>
+                </div>
+                <p className="exp-company">{item.company} — <span className="exp-location">{item.location}</span></p>
+                <p className="card-desc">{item.description}</p>
+                <div className="tag-list">
+                  {item.technologies.slice(0, 5).map((t) => (
+                    <span key={t} className="tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── RESUME PREVIEW ── */}
+      <section className="home-section-preview">
+        <div className="section-preview-header">
+          <h3>Resume</h3>
+          <Link to="/resume" className="see-all-link">View full →</Link>
+        </div>
+        <div className="resume-preview-block">
+          <div className="resume-dl-mini">
+            <span>📄</span>
+            <div>
+              <strong>Navjot Singh Chahal — Resume</strong>
+              <p>MS Electrical Engineering, University of Pennsylvania · 5+ years industry experience</p>
+            </div>
+            <a href={aboutData.resumeUrl} className="btn-resume" download style={{ marginLeft: 'auto', whiteSpace: 'nowrap' }}>
+              ⬇ Download PDF
+            </a>
+          </div>
+          <div className="tag-list" style={{ marginTop: '1rem' }}>
+            {['C++', 'CUDA', 'Python', 'Scala', 'Java', 'ROS2', 'PyTorch', 'TensorRT', 'FPGA', 'MPC', 'SLAM', 'Akka', 'Spring Boot'].map(s => (
+              <span key={s} className="tag">{s}</span>
+            ))}
           </div>
         </div>
       </section>
