@@ -1,0 +1,108 @@
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resume-download-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, #1a3a4a, #0f2030);
+  border: 1px solid #2a4a5a;
+  border-radius: 12px;
+}
+
+.resume-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.resume-download-card h3 {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin: 0 0 0.3rem;
+}
+
+.resume-download-card p {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 0.75rem;
+}
+
+.btn-resume-dl {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: #7ee8fa;
+  color: #0a0a0a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-resume-dl:hover {
+  background: #5cc8dc;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-group {
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.skill-group h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7ee8fa;
+  margin: 0 0 0.75rem;
+}
+
+.edu-institution {
+  color: #7ee8fa;
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+}
+
+.resume-section-heading {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin: 1.5rem 0 0.75rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.4rem;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.resource-item {
+  display: block;
+  padding: 0.6rem 1rem;
+  background: #141414;
+  border: 1px solid #222;
+  border-radius: 6px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.resource-item:hover {
+  background: #1a3a4a;
+  border-color: #7ee8fa44;
+  color: #7ee8fa;
+}

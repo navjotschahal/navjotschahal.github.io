@@ -1,0 +1,32 @@
+{
+  "name": "Navjot Singh Chahal",
+  "title": "Researcher & Software Engineer",
+  "tagline": "Building intelligent systems at the intersection of AI and Software Engineering.",
+  "bio": "I am a passionate researcher and software engineer with a focus on machine learning, natural language processing, and full-stack development. I enjoy solving complex problems and sharing my work with the world.",
+  "avatar": "",
+  "email": "navjotschahal@example.com",
+  "location": "Canada",
+  "resumeUrl": "/resume.pdf",
+  "social": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/navjotschahal",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/navjotschahal",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/navjotschahal",
+      "icon": "twitter"
+    },
+    {
+      "platform": "Google Scholar",
+      "url": "https://scholar.google.com",
+      "icon": "scholar"
+    }
+  ]
+}

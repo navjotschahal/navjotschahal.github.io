@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Natural Language Processing for Code Understanding",
+    "description": "This research explores the application of transformer-based large language models to understand, summarize, and generate code across multiple programming languages.",
+    "abstract": "We present a novel approach using pre-trained language models fine-tuned on code corpora to perform downstream tasks including code summarization, bug detection, and automated test generation. Our experiments show state-of-the-art results on multiple benchmarks.",
+    "tags": ["NLP", "LLMs", "Code Intelligence", "Transformers"],
+    "year": 2024,
+    "venue": "International Conference on Software Engineering (ICSE)",
+    "paperUrl": "#",
+    "codeUrl": "https://github.com/navjotschahal",
+    "image": "",
+    "videoUrl": "",
+    "authors": ["Navjot Singh Chahal", "Co-Author A", "Co-Author B"]
+  },
+  {
+    "id": 2,
+    "title": "Reinforcement Learning for Adaptive Systems",
+    "description": "An investigation into reinforcement learning techniques for building adaptive software systems that improve over time based on user feedback and environmental signals.",
+    "abstract": "This paper presents a framework for integrating reinforcement learning into production software systems, enabling continuous self-optimization. We demonstrate its effectiveness on scheduling and resource allocation problems.",
+    "tags": ["Reinforcement Learning", "Adaptive Systems", "ML"],
+    "year": 2023,
+    "venue": "NeurIPS Workshop",
+    "paperUrl": "#",
+    "codeUrl": "https://github.com/navjotschahal",
+    "image": "",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "authors": ["Navjot Singh Chahal", "Co-Author C"]
+  }
+]

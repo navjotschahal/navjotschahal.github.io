@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "NSC Portfolio",
+    "description": "A personal portfolio website built with React and Vite to showcase research, projects, and experience. Features dynamic JSON-driven content, media embeddings, and a responsive design.",
+    "tags": ["React", "Vite", "JavaScript", "CSS"],
+    "status": "In Progress",
+    "year": 2024,
+    "githubUrl": "https://github.com/navjotschahal/nsc_portfolio",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "JSON-driven dynamic content",
+      "Video and photo media per item",
+      "Responsive design",
+      "Resume download"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "AI Code Review Tool",
+    "description": "An automated code review system powered by large language models that provides meaningful feedback on pull requests, detecting bugs, style issues, and security vulnerabilities.",
+    "tags": ["Python", "LLMs", "GitHub API", "FastAPI"],
+    "status": "Completed",
+    "year": 2023,
+    "githubUrl": "https://github.com/navjotschahal",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "highlights": [
+      "Integrates with GitHub via webhooks",
+      "Uses GPT-4 for code analysis",
+      "REST API built with FastAPI",
+      "Supports Python, JavaScript, Go"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Distributed Task Scheduler",
+    "description": "A high-performance distributed task scheduling system built with Go that supports priority queues, cron-like scheduling, and fault tolerance.",
+    "tags": ["Go", "Distributed Systems", "Redis", "Docker"],
+    "status": "Completed",
+    "year": 2023,
+    "githubUrl": "https://github.com/navjotschahal",
+    "liveUrl": "#",
+    "image": "",
+    "videoUrl": "",
+    "highlights": [
+      "Handles 10k+ tasks/second",
+      "Fault-tolerant with Redis-backed state",
+      "Dockerized microservice architecture",
+      "Prometheus metrics integration"
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "role": "Software Engineer",
+    "company": "Tech Corp",
+    "location": "Toronto, Canada",
+    "type": "Full-time",
+    "startDate": "Jan 2024",
+    "endDate": "Present",
+    "description": "Working on large-scale distributed systems and ML infrastructure. Leading the development of internal tooling used by 200+ engineers.",
+    "highlights": [
+      "Designed and implemented a real-time data pipeline processing 1M+ events/day",
+      "Reduced model inference latency by 40% through optimization",
+      "Mentored 3 junior engineers"
+    ],
+    "technologies": ["Go", "Python", "Kubernetes", "Apache Kafka", "PostgreSQL"]
+  },
+  {
+    "id": 2,
+    "role": "Research Assistant",
+    "company": "University Research Lab",
+    "location": "Waterloo, Canada",
+    "type": "Part-time",
+    "startDate": "Sep 2022",
+    "endDate": "Dec 2023",
+    "description": "Conducted research on NLP and code intelligence. Published 2 papers at top-tier venues and contributed to open-source ML toolkits.",
+    "highlights": [
+      "Published research at ICSE 2024 and NeurIPS Workshop 2023",
+      "Developed novel benchmarks for code intelligence evaluation",
+      "Contributed to open-source NLP libraries"
+    ],
+    "technologies": ["Python", "PyTorch", "HuggingFace", "CUDA", "Jupyter"]
+  },
+  {
+    "id": 3,
+    "role": "Software Engineering Intern",
+    "company": "Startup Inc.",
+    "location": "Remote",
+    "type": "Internship",
+    "startDate": "May 2022",
+    "endDate": "Aug 2022",
+    "description": "Built full-stack features for a B2B SaaS platform. Improved backend performance and redesigned key user-facing components.",
+    "highlights": [
+      "Reduced API response time by 60% through caching and query optimization",
+      "Delivered 5 end-to-end features from design to deployment",
+      "Worked in an agile team using 2-week sprint cycles"
+    ],
+    "technologies": ["React", "Node.js", "TypeScript", "MongoDB", "AWS"]
+  }
+]
