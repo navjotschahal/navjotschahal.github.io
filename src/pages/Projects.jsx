@@ -27,6 +27,7 @@ export default function Projects() {
                   ● {item.status}
                 </span>
               </div>
+              {item.badge && <span className="badge-highlight">{item.badge}</span>}
               <p className="card-desc">{item.description}</p>
               {item.highlights && item.highlights.length > 0 && (
                 <ul className="card-highlights">

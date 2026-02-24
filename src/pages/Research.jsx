@@ -16,6 +16,7 @@ export default function Research() {
                 <h3 className="card-title">{item.title}</h3>
                 <span className="card-year">{item.year}</span>
               </div>
+              {item.badge && <span className="badge-highlight">{item.badge}</span>}
               <p className="card-venue">{item.venue}</p>
               <p className="card-authors">{item.authors.join(', ')}</p>
               <p className="card-desc">{item.description}</p>
