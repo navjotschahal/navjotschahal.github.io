@@ -13,9 +13,15 @@
       "Modelling environmental awareness for PyBullet simulators and Franka robot arms",
       "Building inference characteristics on current/torque relationships, designing models for auto-tuning on any platform"
     ],
-    "technologies": ["C++", "Python", "PyBullet", "ROS2", "Franka", "Control Systems"],
-    "image": "",
-    "videoUrl": ""
+    "technologies": [
+      "C++",
+      "Python",
+      "PyBullet",
+      "ROS2",
+      "Franka",
+      "Control Systems"
+    ],
+    "media": []
   },
   {
     "id": 2,
@@ -31,9 +37,14 @@
       "Defining scope of multi-agent system for analysis of proprioceptive actuator data for task cognitive perception",
       "Reinforcing motor control or mutating physical agent configuration as independent Agents"
     ],
-    "technologies": ["Robotics", "Multi-Agent Systems", "Actuators", "C++", "Python"],
-    "image": "",
-    "videoUrl": ""
+    "technologies": [
+      "Robotics",
+      "Multi-Agent Systems",
+      "Actuators",
+      "C++",
+      "Python"
+    ],
+    "media": []
   },
   {
     "id": 3,
@@ -49,9 +60,15 @@
       "Implemented Grover's, Shor's, Quantum Fourier Transform, Bernstein-Vazirani, Simon's Algorithms, and Quantum Cryptography",
       "Engineered quantum control apparatus using Digital Programmable Function Generator Moku-go for arbitrary function generation and quantum spin control (Hydrogen proton NMR)"
     ],
-    "technologies": ["Python", "Qiskit", "IBM Quantum", "Moku-go", "Quantum Algorithms", "NMR"],
-    "image": "",
-    "videoUrl": ""
+    "technologies": [
+      "Python",
+      "Qiskit",
+      "IBM Quantum",
+      "Moku-go",
+      "Quantum Algorithms",
+      "NMR"
+    ],
+    "media": []
   },
   {
     "id": 4,
@@ -67,9 +84,16 @@
       "Mentoring teams of 4 students in developing and securing guidance from external partners in academia and industry",
       "Guiding teams toward developing and securing embedded products and solutions"
     ],
-    "technologies": ["Nordic nRF", "LoRa", "BLE", "NFC", "CMake", "Embedded C", "RTOS"],
-    "image": "",
-    "videoUrl": ""
+    "technologies": [
+      "Nordic nRF",
+      "LoRa",
+      "BLE",
+      "NFC",
+      "CMake",
+      "Embedded C",
+      "RTOS"
+    ],
+    "media": []
   },
   {
     "id": 5,
@@ -85,9 +109,15 @@
       "All modules custom-built for 20 selected students from across the US",
       "Developed control infrastructure using embedded Linux (Jetson Nano, Raspberry Pi) for real-time manipulation tasks on a Castor Bot"
     ],
-    "technologies": ["Python", "Raspberry Pi", "Jetson Nano", "ROS", "Embedded Linux", "ML Control"],
-    "image": "",
-    "videoUrl": ""
+    "technologies": [
+      "Python",
+      "Raspberry Pi",
+      "Jetson Nano",
+      "ROS",
+      "Embedded Linux",
+      "ML Control"
+    ],
+    "media": []
   },
   {
     "id": 6,
@@ -103,10 +133,17 @@
       "Built Optum proprietary common versioning system library packaged as Ivy and Maven for tool configurations",
       "Library supports export, import, and backup from AWS buckets and an extensible abstract class for any database system"
     ],
-    "technologies": ["Scala 3", "Play 2.8", "Akka Actors", "Functional Programming", "AWS S3", "Ivy", "Maven"],
+    "technologies": [
+      "Scala 3",
+      "Play 2.8",
+      "Akka Actors",
+      "Functional Programming",
+      "AWS S3",
+      "Ivy",
+      "Maven"
+    ],
     "badge": "Ex UHG Optum Engineer",
-    "image": "",
-    "videoUrl": ""
+    "media": []
   },
   {
     "id": 7,
@@ -122,8 +159,15 @@
       "Performed POC for TWAIN-based web scanning using third-party library; integrated Printer/Scanner I/O peripherals using Java and Azure",
       "Integrated NLP-based handwriting recognition ML engine (Transformers) to automate Deutsche Bank international cheque review — improving accuracy 48×"
     ],
-    "technologies": ["Java", "Spring Boot", "NLP", "Transformers", "Azure", "TWAIN", "REST APIs"],
-    "image": "",
-    "videoUrl": ""
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "NLP",
+      "Transformers",
+      "Azure",
+      "TWAIN",
+      "REST APIs"
+    ],
+    "media": []
   }
 ]

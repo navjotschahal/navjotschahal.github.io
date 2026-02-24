@@ -16,15 +16,14 @@
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Lempel-Ziv-Welch custom kernel developed for FPGA synthesis",
       "Content-defined chunking (Gear hash table) with CPU NEON intrinsics",
       "NEON-accelerated SHA-256 on CPU",
       "C++ OpenCL kernel host programming for pipeline control with data-flow parallelism",
       "Achieved 135 Mbps per-thread throughput — limited only by number of cores and kernel synthesis real estate"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 2,
@@ -44,15 +43,14 @@
     "year": 2025,
     "githubUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Interfaced LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS",
       "Localization, navigation, sensing, RL, MPC, SLAM, Particle Filtering, Pure Pursuit — 2nd Rank University Competition",
       "NeRF-based 3D perception for localization and path planning POC using scene reconstruction",
       "Kinematic models using Cardan angles, curvature controllers, Kalman Filters, Markovian and optimization algorithms",
       "Middleware: scheduling for real-time systems, inter-process communication, and OS abstractions"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 3,
@@ -69,14 +67,13 @@
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Akka Actor system manager for multimodal scale-up and inter-model communication",
       "Agent selector, load balancing, and actor-based asynchronous communication message protocol",
       "Demonstrated power of functional programming (Scala) in building modular frameworks for agentic abilities",
       "Manages clusters of various ML models for building cyber-intelligent systems achieving meaningful automation"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 4,
@@ -94,14 +91,13 @@
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "RISC-V ISA-compliant microprocessor with multicycle and 5-stage pipelining",
       "Custom 8-stage Divider Module for optimizing DIV instructions",
       "Achieved 17.65 MHz clock speed with 4-stage AXI4-Lite cache",
       "Implemented on Lattice FPGA"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 5,
@@ -119,13 +115,12 @@
     "year": 2024,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Based on RetinexFormer transformer model with modifications to loss criterion",
       "Achieved PSNR of 22.7 and live video enhancement at 5 FPS",
       "Further accelerated using quantization, pruning, and vertical GPU acceleration (high-performance computing)"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 6,
@@ -144,14 +139,13 @@
     "year": 2024,
     "githubUrl": "#",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "Custom sparse linear layer with model pruning, quantization, and hard pruning to compress large-scale DNNs",
       "75% reduction in memory footprint of VGG16 (500+MB to 277MB) while preserving inference accuracy",
       "Enables deployment on constrained edge platforms",
       "Comparative benchmarking: Apple Metal Performance Shaders (MPS) vs NVIDIA CUDA — throughput, latency, and portability"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 7,
@@ -168,13 +162,12 @@
     "year": 2024,
     "githubUrl": "https://github.com/navjotschahal/nsc_portfolio",
     "liveUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "highlights": [
       "JSON-driven dynamic content — swap data without touching components",
       "Video and photo media per item",
       "Responsive dark-theme design",
       "Resume download and social links"
-    ]
+    ],
+    "media": []
   }
 ]

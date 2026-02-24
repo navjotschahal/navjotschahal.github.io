@@ -17,11 +17,10 @@
     "venue": "University of Pennsylvania — Figueroa GRASP Lab (Independent Study)",
     "paperUrl": "#",
     "codeUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "authors": [
       "Navjot Singh Chahal"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 2,
@@ -39,11 +38,10 @@
     "venue": "University of Pennsylvania — Mod Lab",
     "paperUrl": "#",
     "codeUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "authors": [
       "Navjot Singh Chahal"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 3,
@@ -63,11 +61,10 @@
     "venue": "University of Pennsylvania — ESE 5090 QHEL Lab (Teaching & Research Assistant)",
     "paperUrl": "#",
     "codeUrl": "#",
-    "image": "",
-    "videoUrl": "",
     "authors": [
       "Navjot Singh Chahal"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 4,
@@ -88,11 +85,10 @@
     "venue": "University of Pennsylvania — ESE 615 / X-Lab (F1Tenth Autonomous Racing)",
     "paperUrl": "#",
     "codeUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
-    "image": "",
-    "videoUrl": "",
     "authors": [
       "Navjot Singh Chahal"
-    ]
+    ],
+    "media": []
   },
   {
     "id": 5,
@@ -113,10 +109,9 @@
     "venue": "University of Pennsylvania — ESE 615 (F1Tenth Autonomous Racing)",
     "paperUrl": "#",
     "codeUrl": "https://github.com/navjotschahal/vision_experiment_inteld435i_robo_racer",
-    "image": "",
-    "videoUrl": "",
     "authors": [
       "Navjot Singh Chahal"
-    ]
+    ],
+    "media": []
   }
 ]

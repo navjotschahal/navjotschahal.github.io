@@ -13,7 +13,7 @@ export default function Experience() {
           <div key={item.id} className="timeline-item">
             <div className="timeline-dot" />
             <div className="card">
-              <MediaBlock image={item.image} videoUrl={item.videoUrl} title={item.role} />
+              <MediaBlock media={item.media} title={item.role} />
               <div className="card-body">
                 <div className="card-header-row">
                   <div>

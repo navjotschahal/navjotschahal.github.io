@@ -10,7 +10,7 @@ export default function Research() {
       <div className="card-list">
         {researchData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlock image={item.image} videoUrl={item.videoUrl} title={item.title} />
+            <MediaBlock media={item.media} title={item.title} />
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>
