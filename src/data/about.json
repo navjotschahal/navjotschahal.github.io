@@ -3,11 +3,11 @@
   "title": "MS Electrical Engineering @ UPenn | Robotics · Autonomous Systems · ML · Backend",
   "tagline": "Passionate Engineering graduate (June 2026) with 5+ years of professional experience in research & development of efficient and scalable autonomous systems.",
   "bio": "I am a Master of Science student in Electrical Engineering at the University of Pennsylvania (SEAS), graduating June 2026 with a GPA of 3.49/4.0. With 5+ years of industry experience, I work across robotics (Figueroa GRASP Lab — proprioception & low-level robot control), Mod Lab (modular robotic platforms), quantum hardware experiments (QHEL Lab — IBM quantum devices), embedded IoT systems, and scalable JVM backends. Previously a Software Engineer at UHG Optum (Fortune 5 CTO Acceleration Team, Scala/Akka) and HCL Technologies (Java Spring Boot & NLP automation).",
-  "avatar": "src/assets/media/ese5320socFPGA/soloImage_soc_proj.png",
+  "avatar": "assets/media/ese5320socFPGA/soloImage_soc_proj.png",
   "email": "nschahal@seas.upenn.edu",
   "phone": "+14452259747",
   "location": "Philadelphia, PA, USA",
-  "resumeUrl": "src/assets/media/resume/resume nsc 2025.pdf",
+  "resumeUrl": "assets/media/resume/resume nsc 2025.pdf",
   "backgroundImage": "",
   "social": [
     {
