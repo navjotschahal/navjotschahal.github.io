@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Resume from './pages/Resume';
 import aboutData from './data/about.json';
+import { resolveUrl } from './utils/resolveUrl';
 import './App.css';
 
 function isSafeUrl(url) {
@@ -18,8 +19,8 @@ function isSafeUrl(url) {
 }
 
 function App() {
-  const safeBackground = aboutData.backgroundImage && isSafeUrl(aboutData.backgroundImage)
-    ? aboutData.backgroundImage
+  const safeBackground = aboutData.backgroundImage && isSafeUrl(resolveUrl(aboutData.backgroundImage))
+    ? resolveUrl(aboutData.backgroundImage)
     : null;
 
   const appStyle = safeBackground

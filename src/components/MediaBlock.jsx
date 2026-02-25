@@ -1,30 +1,5 @@
 import './MediaBlock.css';
-
-function resolveUrl(url) {
-  try {
-    const p = new URL(url);
-    if (p.hostname === 'youtu.be') {
-      return `https://www.youtube.com/embed${p.pathname}`;
-    }
-    if ((p.hostname === 'www.youtube.com' || p.hostname === 'youtube.com')) {
-      if (p.pathname === '/watch') {
-        const v = p.searchParams.get('v');
-        if (v) return `https://www.youtube.com/embed/${v}`;
-      }
-      if (p.pathname.startsWith('/shorts/')) {
-        return `https://www.youtube.com/embed${p.pathname.replace('/shorts', '')}`;
-      }
-    }
-    return url; // It's a full URL but not YouTube embed
-  } catch { 
-    // It's a relative path
-    // If it doesn't start with / and is not an external URL, prepend base
-    if (!url.startsWith('/') && !url.startsWith('http')) {
-      return `${import.meta.env.BASE_URL}${url}`;
-    }
-  }
-  return url;
-}
+import { resolveUrl } from '../utils/resolveUrl';
 
 export default function MediaBlock({ media, title }) {
   if (!media || media.length === 0) return null;

@@ -1,5 +1,6 @@
 import researchData from '../data/research.json';
 import MediaBlock from '../components/MediaBlock';
+import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
 export default function Research() {
@@ -31,10 +32,10 @@ export default function Research() {
               </div>
               <div className="card-links">
                 {item.paperUrl && item.paperUrl !== '#' && (
-                  <a href={item.paperUrl} target="_blank" rel="noopener noreferrer" className="link-btn">📄 Paper</a>
+                  <a href={resolveUrl(item.paperUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">📄 Paper</a>
                 )}
                 {item.codeUrl && (
-                  <a href={item.codeUrl} target="_blank" rel="noopener noreferrer" className="link-btn">💻 Code</a>
+                  <a href={resolveUrl(item.codeUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">💻 Code</a>
                 )}
               </div>
             </div>

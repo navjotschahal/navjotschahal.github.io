@@ -3,6 +3,7 @@ import aboutData from '../data/about.json';
 import researchData from '../data/research.json';
 import projectsData from '../data/projects.json';
 import experienceData from '../data/experience.json';
+import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 import './Home.css';
 
@@ -42,7 +43,7 @@ export default function Home() {
       <div className="home-hero">
         <div className="home-avatar-placeholder">
           {aboutData.avatar ? (
-            <img src={aboutData.avatar} alt={aboutData.name} />
+            <img src={resolveUrl(aboutData.avatar)} alt={aboutData.name} />
           ) : (
             <span>{aboutData.name.split(' ').map(w => w[0]).join('')}</span>
           )}
@@ -64,7 +65,7 @@ export default function Home() {
             {aboutData.social.map((s) => (
               <a
                 key={s.platform}
-                href={s.url}
+                href={resolveUrl(s.url)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -75,7 +76,7 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <a href={aboutData.resumeUrl} className="btn-resume" download>
+          <a href={resolveUrl(aboutData.resumeUrl)} className="btn-resume" download>
             ⬇ Download Resume
           </a>
         </div>

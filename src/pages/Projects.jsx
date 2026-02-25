@@ -1,5 +1,6 @@
 import projectsData from '../data/projects.json';
 import MediaBlock from '../components/MediaBlock';
+import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
 const statusColors = {
@@ -43,10 +44,10 @@ export default function Projects() {
               </div>
               <div className="card-links">
                 {item.githubUrl && (
-                  <a href={item.githubUrl} target="_blank" rel="noopener noreferrer" className="link-btn">💻 GitHub</a>
+                  <a href={resolveUrl(item.githubUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">💻 GitHub</a>
                 )}
                 {item.liveUrl && item.liveUrl !== '#' && (
-                  <a href={item.liveUrl} target="_blank" rel="noopener noreferrer" className="link-btn">🌐 Live</a>
+                  <a href={resolveUrl(item.liveUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">🌐 Live</a>
                 )}
               </div>
             </div>

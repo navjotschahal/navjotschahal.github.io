@@ -1,6 +1,7 @@
 import aboutData from '../data/about.json';
 import './PageCommon.css';
 import './Resume.css';
+import { resolveUrl } from '../utils/resolveUrl';
 
 export default function Resume() {
   return (
@@ -14,7 +15,7 @@ export default function Resume() {
           <div>
             <h3>Download Full Resume</h3>
             <p>Get my complete resume as a PDF document.</p>
-            <a href={aboutData.resumeUrl} className="btn-resume-dl" download>
+            <a href={resolveUrl(aboutData.resumeUrl)} className="btn-resume-dl" download>
               ⬇ Download PDF
             </a>
           </div>
