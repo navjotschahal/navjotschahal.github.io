@@ -23,7 +23,21 @@
       "C++ OpenCL kernel host programming for pipeline control with data-flow parallelism",
       "Achieved 135 Mbps per-thread throughput — limited only by number of cores and kernel synthesis real estate"
     ],
-    "media": []
+    "media": [{
+      "type": "image",
+      "url": "src/assets/media/ese5320socFPGA/ese5320_board_soc_fpga.png"
+    },
+  {
+      "type": "image",
+      "url": "src/assets/media/ese5320socFPGA/ese5320_project_group.png"
+    }, {
+      "type": "image",
+      "url": "src/assets/media/ese5320socFPGA/setup_pc_soc.png"
+    },
+  {
+      "type": "image",
+      "url": "src/assets/media/ese5320socFPGA/soloImage_soc_proj.png"
+    }]
   },
   {
     "id": 2,

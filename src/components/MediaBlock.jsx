@@ -24,6 +24,8 @@ export default function MediaBlock({ media, title }) {
   const items = media.filter((m) => m && m.url);
   if (items.length === 0) return null;
 
+  console.log('MediaBlock items:', items);
+
   return (
     <div className="media-block">
       <div className={`media-strip${items.length > 1 ? ' media-strip--multi' : ''}`}>
