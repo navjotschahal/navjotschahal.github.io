@@ -1,6 +1,6 @@
 import './MediaBlock.css';
 
-function toEmbedUrl(url) {
+function resolveUrl(url) {
   try {
     const p = new URL(url);
     if (p.hostname === 'youtu.be') {
@@ -15,7 +15,14 @@ function toEmbedUrl(url) {
         return `https://www.youtube.com/embed${p.pathname.replace('/shorts', '')}`;
       }
     }
-  } catch { /* already an embed URL or relative path */ }
+    return url; // It's a full URL but not YouTube embed
+  } catch { 
+    // It's a relative path
+    // If it doesn't start with / and is not an external URL, prepend base
+    if (!url.startsWith('/') && !url.startsWith('http')) {
+      return `${import.meta.env.BASE_URL}${url}`;
+    }
+  }
   return url;
 }
 
@@ -37,14 +44,14 @@ export default function MediaBlock({ media, title }) {
             {item.type === 'video' ? (
               <div className="media-video-ratio">
                 <iframe
-                  src={toEmbedUrl(item.url)}
+                  src={resolveUrl(item.url)}
                   title={`${title} — media ${i + 1}`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
             ) : (
-              <img src={item.url} alt={`${title} — media ${i + 1}`} />
+              <img src={resolveUrl(item.url)} alt={`${title} — media ${i + 1}`} />
             )}
           </div>
         ))}
