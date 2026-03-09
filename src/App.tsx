@@ -1,3 +1,4 @@
+import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -18,7 +19,7 @@ function isSafeUrl(url) {
   }
 }
 
-function App() {
+const App: React.FC = () => {
   const safeBackground = aboutData.backgroundImage && isSafeUrl(resolveUrl(aboutData.backgroundImage))
     ? resolveUrl(aboutData.backgroundImage)
     : null;
