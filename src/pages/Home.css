@@ -123,11 +123,7 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
-  transition: background 0.2s;
-}
-
-.btn-resume:hover {
-  background: #5cc8dc;
+  opacity: 0.5;
 }
 
 /* What I Do section */

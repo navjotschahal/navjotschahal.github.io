@@ -77,7 +77,7 @@ const HomeComponent: React.FC = () => {
             ))}
           </div>
           <a href={resolveUrl(aboutData.resumeUrl)} className="btn-resume" download>
-            ⬇ Download Resume
+            Download Resume
           </a>
         </div>
       </div>
@@ -201,30 +201,7 @@ const HomeComponent: React.FC = () => {
         </div>
       </section>
 
-      {/* ── RESUME PREVIEW ── */}
-      <section className="home-section-preview">
-        <div className="section-preview-header">
-          <h3>Resume</h3>
-          <Link to="/resume" className="see-all-link">View full →</Link>
-        </div>
-        <div className="resume-preview-block">
-          <div className="resume-dl-mini">
-            <span>📄</span>
-            <div>
-              <strong>Navjot Singh Chahal — Resume</strong>
-              <p>MS Electrical Engineering, University of Pennsylvania · 5+ years industry experience</p>
-            </div>
-            <a href={aboutData.resumeUrl} className="btn-resume" download style={{ marginLeft: 'auto', whiteSpace: 'nowrap' }}>
-              ⬇ Download PDF
-            </a>
-          </div>
-          <div className="tag-list" style={{ marginTop: '1rem' }}>
-            {['C++', 'CUDA', 'Python', 'Scala', 'Java', 'ROS2', 'PyTorch', 'TensorRT', 'FPGA', 'MPC', 'SLAM', 'Akka', 'Spring Boot'].map(s => (
-              <span key={s} className="tag">{s}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }
