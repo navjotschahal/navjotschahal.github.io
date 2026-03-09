@@ -1,15 +1,15 @@
 import React from 'react';
-import { MediaItem } from '../types/media';
+import { MediaItemType } from '../types/media';
 import { resolveUrl } from '../utils/resolveUrl';
 import './MediaBlock.css'; // Make sure this matches your existing CSS import
 
 // 1. Define the props for the component
 interface MediaBlockProps {
-  media: MediaItem[];
+  media: MediaItemType[];
 }
 
 // 2. Apply the React.FC (Functional Component) type and pass the props
-const MediaBlock: React.FC<MediaBlockProps> = ({ media }) => {
+const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
   if (!media || media.length === 0) {
     return null;
   }
@@ -56,4 +56,4 @@ const MediaBlock: React.FC<MediaBlockProps> = ({ media }) => {
   );
 };
 
-export default MediaBlock;
+export default MediaBlockComponent;

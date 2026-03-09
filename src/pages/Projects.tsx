@@ -1,6 +1,6 @@
-import { Project } from '../types/project';
+import { ProjectType } from '../types/project';
 import projectsData from '../data/projects.json';
-import MediaBlock from '../components/MediaBlock';
+import MediaBlockComponent from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
@@ -10,7 +10,7 @@ const statusColors = {
   'Archived': '#9e9e9e',
 };
 
-const Projects: React.FC = () => {
+const ProjectsComponent: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Projects</h2>
@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
       <div className="card-list">
         {projectsData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlock media={item.media} title={item.title} />
+            <MediaBlockComponent media={item.media} title={item.title} />
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>
@@ -60,4 +60,4 @@ const Projects: React.FC = () => {
 }
 
 
-export default Projects;
+export default ProjectsComponent;

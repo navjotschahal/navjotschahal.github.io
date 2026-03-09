@@ -1,6 +1,6 @@
-import { MediaItem } from './media';
+import { MediaItemType } from './media';
 
-export interface Research {
+export interface ResearchType {
   id: number;
   title: string;
   description: string;
@@ -11,5 +11,5 @@ export interface Research {
   paperUrl: string;
   codeUrl: string;
   authors: string[];
-  media: MediaItem[];
+  media: MediaItemType[];
 }

@@ -1,10 +1,10 @@
-import { Research } from '../types/research';
+import { ResearchType } from '../types/research';
 import researchData from '../data/research.json';
-import MediaBlock from '../components/MediaBlock';
+import MediaBlockComponent from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
-const Research: React.FC = () => {
+const ResearchComponent: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Research</h2>
@@ -12,7 +12,7 @@ const Research: React.FC = () => {
       <div className="card-list">
         {researchData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlock media={item.media} title={item.title} />
+            <MediaBlockComponent media={item.media} title={item.title} />
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>
@@ -48,4 +48,4 @@ const Research: React.FC = () => {
 }
 
 
-export default Research;
+export default ResearchComponent;

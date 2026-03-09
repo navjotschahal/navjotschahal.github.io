@@ -3,7 +3,7 @@ import './PageCommon.css';
 import './Resume.css';
 import { resolveUrl } from '../utils/resolveUrl';
 
-const Resume: React.FC = () => {
+const ResumeComponent: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Resume</h2>
@@ -87,4 +87,4 @@ const Resume: React.FC = () => {
 }
 
 
-export default Resume;
+export default ResumeComponent;

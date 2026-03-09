@@ -36,7 +36,7 @@ const statusColors = {
   'Archived': '#9e9e9e',
 };
 
-const Home: React.FC = () => {
+const HomeComponent: React.FC = () => {
   return (
     <div className="home-page">
       {/* ── HERO ── */}
@@ -230,4 +230,4 @@ const Home: React.FC = () => {
 }
 
 
-export default Home;
+export default HomeComponent;

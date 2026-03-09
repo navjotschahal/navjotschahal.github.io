@@ -1,6 +1,6 @@
-import { MediaItem } from './media';
+import { MediaItemType } from './media';
 
-export interface Experience {
+export interface ExperienceType {
   id: number;
   role: string;
   company: string;
@@ -12,5 +12,5 @@ export interface Experience {
   highlights: string[];
   technologies: string[];
   badge?: string;
-  media: MediaItem[];
+  media: MediaItemType[];
 }

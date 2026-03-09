@@ -1,6 +1,6 @@
-import { MediaItem } from './media';
+import { MediaItemType } from './media';
 
-export interface Project {
+export interface ProjectType {
   id: number;
   title: string;
   description: string;
@@ -10,5 +10,5 @@ export interface Project {
   githubUrl: string;
   liveUrl: string;
   highlights: string[];
-  media: MediaItem[];
+  media: MediaItemType[];
 }

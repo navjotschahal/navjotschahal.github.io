@@ -1,10 +1,10 @@
-import { Experience } from '../types/experience';
+import { ExperienceType } from '../types/experience';
 import experienceData from '../data/experience.json';
-import MediaBlock from '../components/MediaBlock';
+import MediaBlockComponent from '../components/MediaBlock';
 import './PageCommon.css';
 import './Experience.css';
 
-const Experience: React.FC = () => {
+const ExperienceComponent: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Experience</h2>
@@ -14,7 +14,7 @@ const Experience: React.FC = () => {
           <div key={item.id} className="timeline-item">
             <div className="timeline-dot" />
             <div className="card">
-              <MediaBlock media={item.media} title={item.role} />
+              <MediaBlockComponent media={item.media} title={item.role} />
               <div className="card-body">
                 <div className="card-header-row">
                   <div>
@@ -50,4 +50,4 @@ const Experience: React.FC = () => {
 }
 
 
-export default Experience;
+export default ExperienceComponent;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar: React.FC = () => {
+const NavbarComponent: React.FC = () => {
   return (
     <nav className="navbar">
       {/* Your existing Navbar links remain the same */}
@@ -17,4 +17,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default NavbarComponent;

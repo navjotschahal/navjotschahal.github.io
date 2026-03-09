@@ -1,6 +1,6 @@
 export type MediaType = 'image' | 'video' | 'youtube' | 'pdf' | string; 
 
-export interface MediaItem {
+export interface MediaItemType {
   type: MediaType;
   url: string;
 }
