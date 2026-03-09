@@ -1,15 +1,16 @@
+import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Research from './pages/Research';
-import Projects from './pages/Projects';
-import Experience from './pages/Experience';
-import Resume from './pages/Resume';
+import NavbarComponent from './components/Navbar';
+import HomeComponent from './pages/Home';
+import ResearchComponent from './pages/Research';
+import ProjectsComponent from './pages/Projects';
+import ExperienceComponent from './pages/Experience';
+import ResumeComponent from './pages/Resume';
 import aboutData from './data/about.json';
 import { resolveUrl } from './utils/resolveUrl';
 import './App.css';
 
-function isSafeUrl(url) {
+function isSafeUrl(url: string) {
   try {
     const parsed = new URL(url, window.location.href);
     return parsed.protocol === 'https:' || parsed.protocol === 'http:';
@@ -18,7 +19,7 @@ function isSafeUrl(url) {
   }
 }
 
-function App() {
+const AppComponent: React.FC = () => {
   const safeBackground = aboutData.backgroundImage && isSafeUrl(resolveUrl(aboutData.backgroundImage))
     ? resolveUrl(aboutData.backgroundImage)
     : null;
@@ -37,14 +38,14 @@ function App() {
     <HashRouter>
       <div className="app-root" style={appStyle}>
         {safeBackground && <div className="app-bg-overlay" />}
-        <Navbar />
+        <NavbarComponent />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="/" element={<HomeComponent />} />
+            <Route path="/research" element={<ResearchComponent />} />
+            <Route path="/projects" element={<ProjectsComponent />} />
+            <Route path="/experience" element={<ExperienceComponent />} />
+            <Route path="/resume" element={<ResumeComponent />} />
           </Routes>
         </main>
       </div>
@@ -52,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppComponent;

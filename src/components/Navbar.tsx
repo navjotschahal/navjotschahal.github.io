@@ -1,12 +1,13 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import aboutData from '../data/about.json';
 import './Navbar.css';
 
-export default function Navbar() {
+const NavbarComponent: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <NavLink to="/">{aboutData.name.split(' ').map(w => w[0]).join('')}</NavLink>
+        <NavLink to="/">{aboutData.name.split(' ').map((w: string) => w[0]).join('')}</NavLink>
       </div>
       <ul className="navbar-links">
         <li><NavLink to="/" end>Home</NavLink></li>
@@ -18,3 +19,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default NavbarComponent;

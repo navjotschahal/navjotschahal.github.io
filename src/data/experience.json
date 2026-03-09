@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "role": "Research Assistant — Figueroa GRASP Lab",
+    "role": "Robotics Research Engineer Figueroa GRASP Lab",
     "company": "University of Pennsylvania",
     "location": "Philadelphia, PA, USA",
     "type": "Academic",
@@ -25,7 +25,7 @@
   },
   {
     "id": 2,
-    "role": "Research Assistant — Mod Lab",
+    "role": "RL Engineer Mod Lab",
     "company": "University of Pennsylvania",
     "location": "Philadelphia, PA, USA",
     "type": "Academic",
@@ -48,7 +48,7 @@
   },
   {
     "id": 3,
-    "role": "Teaching & Research Assistant — ESE 5090 QHEL Lab",
+    "role": "Quantum Research Engineer  QHL Lab",
     "company": "University of Pennsylvania",
     "location": "Philadelphia, PA, USA",
     "type": "Academic",
@@ -97,7 +97,7 @@
   },
   {
     "id": 5,
-    "role": "Lead Robotics Teacher",
+    "role": "Lead Robotics Engineer",
     "company": "SMP (Summer Mentorship Program)",
     "location": "Philadelphia, PA, USA",
     "type": "Teaching",
