@@ -1,57 +1,109 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Thumbs, Autoplay } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
 import { MediaItemType } from '../types/media';
 import { resolveUrl } from '../utils/resolveUrl';
-import './MediaBlock.css'; // Make sure this matches your existing CSS import
+import './MediaBlock.css';
 
-// 1. Define the props for the component
 interface MediaBlockProps {
   media: MediaItemType[];
 }
 
-// 2. Apply the React.FC (Functional Component) type and pass the props
 const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
   if (!media || media.length === 0) {
     return null;
   }
 
-  return (
-    <div className="media-container">
-      {media.map((item, index) => {
-        // Only use resolveUrl for relative paths like your assets folder
-        const isAbsoluteUrl = item.url.startsWith('http') || item.url.startsWith('//');
-        const finalUrl = isAbsoluteUrl ? item.url : resolveUrl(`../${item.url}`);
+  // Helper to format URLs
+  const getUrl = (url: string) => {
+    return url.startsWith('http') || url.startsWith('//') ? url : resolveUrl(`../${url}`);
+  };
 
-        switch (item.type) {
-          case 'image':
-            return (
-              <img 
-                key={index} 
-                src={finalUrl} 
-                alt={`Media item ${index}`} 
-                className="media-image" 
-              />
-            );
-          case 'youtube':
-            return (
-              <iframe
-                key={index}
-                src={item.url} // YouTube URLs are absolute
-                title={`YouTube video ${index}`}
-                className="media-youtube"
-                allowFullScreen
-              />
-            );
-          case 'video':
-            return (
-              <video key={index} controls className="media-video">
-                <source src={finalUrl} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            );
-          default:
-            return null; // Ignore unknown media types
-        }
-      })}
+  return (
+    <div className="media-carousel-wrapper">
+      {/* ── MAIN VIEWER ── */}
+      <Swiper
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        } as React.CSSProperties}
+        modules={[Navigation, Thumbs, Autoplay]}
+        navigation={media.length > 1}
+        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        loop={media.length > 1}
+        className="main-swiper"
+      >
+        {media.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="media-content">
+              {item.type === 'image' && (
+                <>
+                  {/* 1. The Blurred Background */}
+                  <img 
+                    src={getUrl(item.url)} 
+                    alt="" 
+                    className="media-image-blur" 
+                  />
+                  {/* 2. The Main Foreground Image */}
+                  <img 
+                    src={getUrl(item.url)} 
+                    alt={`Media item ${index}`} 
+                    className="media-image live-photo-effect" 
+                  />
+                </>
+              )}
+              {item.type === 'youtube' && (
+                <iframe
+                  src={item.url}
+                  title={`YouTube video ${index}`}
+                  className="media-youtube"
+                  allowFullScreen
+                />
+              )}
+              {item.type === 'video' && (
+                <video controls muted className="media-video">
+                  <source src={getUrl(item.url)} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* ── THUMBNAILS STRIP (Only show if multiple items) ── */}
+      {media.length > 1 && (
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          modules={[Thumbs]}
+          watchSlidesProgress
+          slidesPerView="auto"
+          spaceBetween={8}
+          className="thumbs-swiper"
+        >
+          {media.map((item, index) => (
+            <SwiperSlide key={index} className="thumbnail-slide">
+              <div className="thumbnail-item">
+                {item.type === 'image' ? (
+                  <img src={getUrl(item.url)} alt={`Thumbnail ${index}`} />
+                ) : (
+                  <div className="thumbnail-placeholder">{item.type}</div>
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 };

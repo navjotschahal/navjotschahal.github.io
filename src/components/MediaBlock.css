@@ -1,69 +1,129 @@
-/* ── Media strip wrapper ── */
-.media-block {
+/* ── Main Wrapper ── */
+.media-carousel-wrapper {
   width: 100%;
   margin-bottom: 1rem;
   background: #111;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
-}
-
-/* ── Horizontal scroll strip ── */
-.media-strip {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 0;
-  scrollbar-width: thin;
-  scrollbar-color: #333 transparent;
+  flex-direction: column;
 }
 
-.media-strip::-webkit-scrollbar {
-  height: 4px;
-}
-
-.media-strip::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.media-strip::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 2px;
-}
-
-/* Single item fills full width; multiple items show 85% so next item peeks */
-.media-item {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  min-width: 0;
-}
-
-.media-strip--multi .media-item {
-  flex: 0 0 85%;
-}
-
-/* ── Video: 16:9 aspect ratio box ── */
-.media-item--video .media-video-ratio {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+/* ── Main Swiper (Hero View) ── */
+.main-swiper {
+  width: 100%;
+  height: 280px; /* Adjust height as needed */
   background: #000;
 }
 
-.media-item--video .media-video-ratio iframe {
+/* ── Media Content Wrapper ── */
+.media-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000; /* Fallback for videos/youtube */
+}
+
+/* ── The Blurred Background Layer ── */
+.media-image-blur {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover; /* Fill the whole space */
+  filter: blur(20px) brightness(0.6); /* Blur it and dim it slightly */
+  transform: scale(1.2); /* Scale up to hide messy blurred edges */
+  z-index: 0;
 }
 
-/* ── Image: fixed height, cover fit ── */
-.media-item--image img {
+/* ── The Main Foreground Media ── */
+.media-image, .media-youtube, .media-video {
   width: 100%;
-  height: 260px;
+  height: 100%;
+  object-fit: contain; /* Keep the whole image visible */
+  border: none;
+  position: relative;
+  z-index: 1; /* Keep it above the blur */
+}
+
+/* ── Live Photo Effect (Ken Burns) ── */
+@keyframes livePhoto {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* Only apply the animation to the ACTIVE slide so it resets properly */
+.swiper-slide-active .live-photo-effect {
+  animation: livePhoto 6s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Override Swiper Navigation Arrows to make them smaller/cleaner */
+.swiper-button-next, .swiper-button-prev {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 24px 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  transform: scale(0.6);
+  transition: background 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ── Thumbnails Swiper (iPhone Style Strip) ── */
+.thumbs-swiper {
+  width: 100%;
+  padding: 12px 12px !important;
+  background: #1a1a1a;
+  box-sizing: border-box;
+}
+
+/* Force Swiper slides to shrink to thumbnail size */
+.thumbs-swiper .swiper-slide {
+  width: 64px !important;
+  height: 64px !important;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+/* The active thumbnail */
+.thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border-color: #4caf50; /* Adjust to match your theme */
+  transform: scale(1.05);
+}
+
+.thumbnail-item {
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.thumbnail-item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
+}
+
+.thumbnail-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
