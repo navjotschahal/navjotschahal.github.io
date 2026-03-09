@@ -19,16 +19,6 @@
       "platform": "LinkedIn",
       "url": "https://linkedin.com/in/nschahal/",
       "icon": "linkedin"
-    },
-    {
-      "platform": "Twitter",
-      "url": "https://twitter.com/",
-      "icon": "twitter"
-    },
-    {
-      "platform": "Google Scholar",
-      "url": "https://scholar.google.com",
-      "icon": "scholar"
     }
   ]
 }
