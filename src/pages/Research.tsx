@@ -4,7 +4,7 @@ import MediaBlock from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
-export default const Research: React.FC = () => {
+const Research: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Research</h2>
@@ -46,3 +46,6 @@ export default const Research: React.FC = () => {
     </div>
   );
 }
+
+
+export default Research;

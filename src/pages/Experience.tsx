@@ -4,7 +4,7 @@ import MediaBlock from '../components/MediaBlock';
 import './PageCommon.css';
 import './Experience.css';
 
-export default const Experience: React.FC = () => {
+const Experience: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Experience</h2>
@@ -48,3 +48,6 @@ export default const Experience: React.FC = () => {
     </div>
   );
 }
+
+
+export default Experience;

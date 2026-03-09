@@ -10,7 +10,7 @@ const statusColors = {
   'Archived': '#9e9e9e',
 };
 
-export default const Projects: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Projects</h2>
@@ -58,3 +58,6 @@ export default const Projects: React.FC = () => {
     </div>
   );
 }
+
+
+export default Projects;
