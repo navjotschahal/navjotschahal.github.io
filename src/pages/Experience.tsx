@@ -1,9 +1,10 @@
+import { Experience } from '../types/experience';
 import experienceData from '../data/experience.json';
 import MediaBlock from '../components/MediaBlock';
 import './PageCommon.css';
 import './Experience.css';
 
-export default function Experience() {
+export default const Experience: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Experience</h2>

@@ -1,9 +1,10 @@
+import { Research } from '../types/research';
 import researchData from '../data/research.json';
 import MediaBlock from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
-export default function Research() {
+export default const Research: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Research</h2>

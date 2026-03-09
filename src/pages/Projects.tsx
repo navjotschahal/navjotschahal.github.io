@@ -1,3 +1,4 @@
+import { Project } from '../types/project';
 import projectsData from '../data/projects.json';
 import MediaBlock from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
@@ -9,7 +10,7 @@ const statusColors = {
   'Archived': '#9e9e9e',
 };
 
-export default function Projects() {
+export default const Projects: React.FC = () => {
   return (
     <div className="page">
       <h2 className="page-title">Projects</h2>
