@@ -79,7 +79,7 @@
     ],
     "status": "Completed",
     "year": 2025,
-    "githubUrl": "#",
+    "githubUrl": "https://github.com/navjotschahal/distributed_autonomous_agents",
     "liveUrl": "#",
     "highlights": [
       "Akka Actor system manager for multimodal scale-up and inter-model communication",
@@ -103,7 +103,7 @@
     ],
     "status": "Completed",
     "year": 2025,
-    "githubUrl": "#",
+    "githubUrl": "https://github.com/navjotschahal/RISCV-Mircoprocessor",
     "liveUrl": "#",
     "highlights": [
       "RISC-V ISA-compliant microprocessor with multicycle and 5-stage pipelining",
@@ -127,7 +127,7 @@
     ],
     "status": "Completed",
     "year": 2024,
-    "githubUrl": "#",
+    "githubUrl": "https://github.com/navjotschahal/ForkedRetinexformer",
     "liveUrl": "#",
     "highlights": [
       "Based on RetinexFormer transformer model with modifications to loss criterion",
@@ -151,7 +151,7 @@
     ],
     "status": "Completed",
     "year": 2024,
-    "githubUrl": "#",
+    "githubUrl": "https://github.com/navjotschahal/DNN_ACCELERATION",
     "liveUrl": "#",
     "highlights": [
       "Custom sparse linear layer with model pruning, quantization, and hard pruning to compress large-scale DNNs",
@@ -174,8 +174,8 @@
     ],
     "status": "In Progress",
     "year": 2024,
-    "githubUrl": "https://github.com/navjotschahal/nsc_portfolio",
-    "liveUrl": "#",
+    "githubUrl": "https://github.com/navjotschahal/navjotschahal.github.io",
+    "liveUrl": "https://navjotschahal.github.io",
     "highlights": [
       "JSON-driven dynamic content — swap data without touching components",
       "Video and photo media per item",
