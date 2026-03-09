@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="64" height="64">
+  <defs>
+    <linearGradient id="quantumBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="quantumState" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="128" cy="128" r="96" fill="none" stroke="url(#quantumBase)" stroke-width="6" stroke-dasharray="12 12" opacity="0.8"/>
+  
+  <ellipse cx="128" cy="128" rx="96" ry="32" fill="none" stroke="url(#quantumBase)" stroke-width="4" opacity="0.5"/>
+  
+  <line x1="128" y1="32" x2="128" y2="224" stroke="url(#quantumBase)" stroke-width="4" opacity="0.5" stroke-dasharray="8 8"/>
+  
+  <line x1="128" y1="128" x2="186" y2="54" stroke="url(#quantumState)" stroke-width="10" stroke-linecap="round"/>
+  
+  <circle cx="186" cy="54" r="14" fill="url(#quantumState)"/>
+  
+  <circle cx="128" cy="128" r="8" fill="#ffffff" />
+</svg>
