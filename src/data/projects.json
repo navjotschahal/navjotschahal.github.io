@@ -64,7 +64,22 @@
       "Kinematic models using Cardan angles, curvature controllers, Kalman Filters, Markovian and optimization algorithms",
       "Middleware: scheduling for real-time systems, inter-process communication, and OS abstractions"
     ],
-    "media": []
+    "media": [
+      {"type": "youtube", "url": "https://youtu.be/OSZjc79oTJo?feature=shared"},
+      {"type": "video", "url": "assets/media/f1TenthRoboRacers/outdoor_sunlight_practice.MOV"},
+      {
+      "type": "image",
+      "url": "assets/media/f1TenthRoboRacers/f1_group.png"
+    },
+    {
+      "type": "image",
+      "url": "assets/media/f1TenthRoboRacers/f1_duo.png"
+    },
+    {
+      "type": "image",
+      "url": "assets/media/f1TenthRoboRacers/f1_team.png"
+    }
+    ]
   },
   {
     "id": 3,
@@ -111,7 +126,16 @@
       "Achieved 17.65 MHz clock speed with 4-stage AXI4-Lite cache",
       "Implemented on Lattice FPGA"
     ],
-    "media": []
+    "media": [
+      {
+        "type": "image",
+        "url": "assets/media/risc_v_comp_arch/lattice_fpga.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/risc_v_comp_arch/lattice_fpga_back.png"
+      }
+    ]
   },
   {
     "id": 5,
@@ -134,7 +158,12 @@
       "Achieved PSNR of 22.7 and live video enhancement at 5 FPS",
       "Further accelerated using quantization, pruning, and vertical GPU acceleration (high-performance computing)"
     ],
-    "media": []
+    "media": [
+      {
+        "type": "image",
+        "url": "assets/media/LOW_LIGHT_IMAGE_ENHANCEMENT/BATMAN_ENHANCED.png"
+      }
+    ]
   },
   {
     "id": 6,
@@ -159,7 +188,12 @@
       "Enables deployment on constrained edge platforms",
       "Comparative benchmarking: Apple Metal Performance Shaders (MPS) vs NVIDIA CUDA — throughput, latency, and portability"
     ],
-    "media": []
+    "media": [
+      {
+        "type": "image",
+        "url": "assets/media/dnn_Acceleration/results_dnn_acc.png"
+      }
+    ]
   },
   {
     "id": 7,

@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import aboutData from '../data/about.json';
 import researchData from '../data/research.json';
 import projectsData from '../data/projects.json';
 import experienceData from '../data/experience.json';
+import MediaBlockComponent from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 import './Home.css';
@@ -37,6 +39,16 @@ const statusColors = {
 };
 
 const HomeComponent: React.FC = () => {
+  const [resumeMode, setResumeMode] = useState<'short' | 'comprehensive'>('short');
+  const projectsWithMedia = projectsData.filter((item) => item.media && item.media.length > 0);
+  const researchWithMedia = researchData.filter((item) => item.media && item.media.length > 0);
+
+  const isComprehensive = resumeMode === 'comprehensive';
+  const resumeUrl = resolveUrl(
+    isComprehensive ? aboutData.comprehensiveResumeUrl ?? aboutData.resumeUrl : aboutData.resumeUrl,
+  );
+  const resumeLabel = isComprehensive ? 'Download Comprehensive Resume' : 'Download Short Resume';
+
   return (
     <div className="home-page">
       {/* ── HERO ── */}
@@ -76,9 +88,29 @@ const HomeComponent: React.FC = () => {
               </a>
             ))}
           </div>
-          <a href={resolveUrl(aboutData.resumeUrl)} className="btn-resume" download>
-            Download Resume
-          </a>
+          <div className="home-resume-actions">
+            <div className="resume-toggle-group home-resume-toggle" role="group" aria-label="Resume format toggle">
+              <button
+                type="button"
+                className={`resume-toggle-button ${!isComprehensive ? 'active' : ''}`}
+                aria-pressed={!isComprehensive}
+                onClick={() => setResumeMode('short')}
+              >
+                Short Resume
+              </button>
+              <button
+                type="button"
+                className={`resume-toggle-button ${isComprehensive ? 'active' : ''}`}
+                aria-pressed={isComprehensive}
+                onClick={() => setResumeMode('comprehensive')}
+              >
+                Comprehensive Resume
+              </button>
+            </div>
+            <a href={resumeUrl} className="btn-resume" download>
+              {resumeLabel}
+            </a>
+          </div>
         </div>
       </div>
 
@@ -115,6 +147,27 @@ const HomeComponent: React.FC = () => {
           <h3>Research</h3>
           <Link to="/research" className="see-all-link">See all →</Link>
         </div>
+        {researchWithMedia.length > 0 && (
+          <div className="home-research-media-showcase">
+            {researchWithMedia.map((item) => (
+              <div key={item.id} className="home-research-feature">
+                <div className="home-projects-copy">
+                  <p className="projects-kicker">Featured research media</p>
+                  <h4>{item.title}</h4>
+                  <p className="card-desc">{item.description}</p>
+                  <div className="tag-list">
+                    {item.tags.slice(0, 5).map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="home-projects-media">
+                  <MediaBlockComponent media={item.media} title={item.title} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="preview-card-list">
           {researchData.slice(0, 3).map((item) => (
             <div key={item.id} className="preview-card">
@@ -142,13 +195,39 @@ const HomeComponent: React.FC = () => {
       </section>
 
       {/* ── PROJECTS PREVIEW ── */}
-      <section className="home-section-preview">
+      <section className="home-section-preview home-projects-section" id="projects">
         <div className="section-preview-header">
           <h3>Projects</h3>
           <Link to="/projects" className="see-all-link">See all →</Link>
         </div>
+        {projectsWithMedia.length > 0 && (
+          <div className="home-projects-media-showcase">
+            {projectsWithMedia.map((project) => (
+              <div key={project.id} className="home-projects-feature">
+                <div className="home-projects-copy">
+                  <p className="projects-kicker">Featured media</p>
+                  <h4>{project.title}</h4>
+                  <p className="card-desc">{project.description}</p>
+                  <div className="tag-list">
+                    {project.tags.slice(0, 5).map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                  <div className="card-links">
+                    {project.githubUrl && project.githubUrl !== '#' && (
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="link-btn">💻 GitHub</a>
+                    )}
+                  </div>
+                </div>
+                <div className="home-projects-media">
+                  <MediaBlockComponent media={project.media} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="preview-card-list">
-          {projectsData.slice(0, 3).map((item) => (
+          {projectsData.map((item) => (
             <div key={item.id} className="preview-card">
               <div className="preview-card-body">
                 <div className="preview-card-top">
