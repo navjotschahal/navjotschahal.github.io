@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import aboutData from '../data/about.json';
 import './PageCommon.css';
 import './Resume.css';
 import { resolveUrl } from '../utils/resolveUrl';
 
 const ResumeComponent: React.FC = () => {
+  const [resumeMode, setResumeMode] = useState<'short' | 'comprehensive'>('short');
+
+  const isComprehensive = resumeMode === 'comprehensive';
+  const resumeUrl = resolveUrl(
+    isComprehensive ? aboutData.comprehensiveResumeUrl ?? aboutData.resumeUrl : aboutData.resumeUrl,
+  );
+  const resumeLabel = isComprehensive ? 'Download Comprehensive Resume' : 'Download Short Resume';
+
   return (
     <div className="page">
       <h2 className="page-title">Resume</h2>
@@ -13,11 +22,31 @@ const ResumeComponent: React.FC = () => {
         <div className="resume-download-card">
           <div className="resume-icon">📄</div>
           <div>
-            <h3>Download Full Resume</h3>
-            <p>Get my complete resume as a PDF document.</p>
-            <a href={resolveUrl(aboutData.resumeUrl)} className="btn-resume-dl" download>
-              ⬇ Download PDF
-            </a>
+            <h3>Download Resume</h3>
+            <p>Start with the short resume, or switch to the comprehensive PDF when needed.</p>
+            <div className="resume-download-actions">
+              <div className="resume-toggle-group" role="group" aria-label="Resume format toggle">
+                <button
+                  type="button"
+                  className={`resume-toggle-button ${!isComprehensive ? 'active' : ''}`}
+                  aria-pressed={!isComprehensive}
+                  onClick={() => setResumeMode('short')}
+                >
+                  Short Resume
+                </button>
+                <button
+                  type="button"
+                  className={`resume-toggle-button ${isComprehensive ? 'active' : ''}`}
+                  aria-pressed={isComprehensive}
+                  onClick={() => setResumeMode('comprehensive')}
+                >
+                  Comprehensive Resume
+                </button>
+              </div>
+              <a href={resumeUrl} className="btn-resume-dl" download>
+                ⬇ {resumeLabel}
+              </a>
+            </div>
           </div>
         </div>
 

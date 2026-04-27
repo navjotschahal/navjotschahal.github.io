@@ -94,6 +94,17 @@
   margin-bottom: 1.25rem;
 }
 
+.home-resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.home-resume-toggle {
+  width: fit-content;
+}
+
 .social-link {
   display: flex;
   align-items: center;
@@ -123,7 +134,16 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
-  opacity: 0.5;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-resume:hover {
+  background: #5cc8dc;
+}
+
+.btn-resume:focus-visible {
+  outline: 2px solid #7ee8fa;
+  outline-offset: 2px;
 }
 
 /* What I Do section */
@@ -196,6 +216,10 @@
     justify-content: center;
   }
 
+  .home-resume-actions {
+    align-items: center;
+  }
+
   .home-meta {
     justify-content: center;
   }
@@ -204,6 +228,64 @@
 /* Section previews on home page */
 .home-section-preview {
   margin-top: 3rem;
+}
+
+.home-projects-section {
+  scroll-margin-top: 90px;
+}
+
+.home-projects-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.home-projects-media-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-research-media-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-research-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.home-projects-copy {
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.96), rgba(16, 24, 32, 0.96));
+  border: 1px solid #273646;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.projects-kicker {
+  margin: 0 0 0.35rem;
+  color: #7ee8fa;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.home-projects-copy h4 {
+  margin: 0 0 0.6rem;
+  color: #f0f0f0;
+  font-size: 1.15rem;
+}
+
+.home-projects-media {
+  min-width: 0;
 }
 
 .section-preview-header {
@@ -236,6 +318,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .home-projects-feature {
+    grid-template-columns: 1fr;
+  }
 }
 
 .preview-card {

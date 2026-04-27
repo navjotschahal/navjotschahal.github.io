@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -14,10 +14,12 @@ import './MediaBlock.css';
 
 interface MediaBlockProps {
   media: MediaItemType[];
+  title?: string;
 }
 
 const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const mainSwiperRef = useRef<SwiperType | null>(null);
 
   if (!media || media.length === 0) {
     return null;
@@ -25,7 +27,39 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
 
   // Helper to format URLs
   const getUrl = (url: string) => {
-    return url.startsWith('http') || url.startsWith('//') ? url : resolveUrl(`../${url}`);
+    // If it's a remote URL, return as-is for non-YouTube links
+    if (url.startsWith('http') || url.startsWith('//')) {
+      return url;
+    }
+
+    // Otherwise resolve relative asset paths
+    return resolveUrl(`../${url}`);
+  };
+
+  // Convert various YouTube URLs to an embeddable URL
+  const getYouTubeEmbed = (url: string) => {
+    try {
+      // Strip params and handle short links
+      if (url.includes('youtu.be/')) {
+        const id = url.split('youtu.be/')[1].split(/[?&]/)[0];
+        return `https://www.youtube.com/embed/${id}`;
+      }
+
+      // Full watch URL
+      if (url.includes('youtube.com/watch')) {
+        const params = new URL(url).searchParams;
+        const id = params.get('v');
+        if (id) return `https://www.youtube.com/embed/${id}`;
+      }
+
+      // Already an embed URL
+      if (url.includes('/embed/')) return url;
+    } catch (e) {
+      // Fall back to the original URL on parse errors
+      return url;
+    }
+
+    return url;
   };
 
   return (
@@ -39,7 +73,29 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
         modules={[Navigation, Thumbs, Autoplay]}
         navigation={media.length > 1}
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: true }}
+        onSwiper={(s) => {
+          mainSwiperRef.current = s;
+          // Stop autoplay if initial slide is a video/youtube
+          const idx = s.realIndex ?? 0;
+          const current = media[idx];
+          if (current && (current.type === 'video' || current.type === 'youtube')) {
+            s.autoplay?.stop();
+          } else {
+            s.autoplay?.start();
+          }
+        }}
+        onSlideChange={() => {
+          const s = mainSwiperRef.current;
+          if (!s) return;
+          const idx = s.realIndex ?? 0;
+          const current = media[idx];
+          if (current && (current.type === 'video' || current.type === 'youtube')) {
+            s.autoplay?.stop();
+          } else {
+            s.autoplay?.start();
+          }
+        }}
         loop={media.length > 1}
         className="main-swiper"
       >
@@ -64,7 +120,7 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
               )}
               {item.type === 'youtube' && (
                 <iframe
-                  src={item.url}
+                  src={getYouTubeEmbed(item.url)}
                   title={`YouTube video ${index}`}
                   className="media-youtube"
                   allowFullScreen
@@ -72,7 +128,10 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
               )}
               {item.type === 'video' && (
                 <video controls muted className="media-video">
-                  <source src={getUrl(item.url)} type="video/mp4" />
+                  <source
+                    src={getUrl(item.url)}
+                    type={item.url.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'}
+                  />
                   Your browser does not support the video tag.
                 </video>
               )}

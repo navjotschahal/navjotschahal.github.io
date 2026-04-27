@@ -20,7 +20,16 @@
     "authors": [
       "Navjot Singh Chahal"
     ],
-    "media": []
+    "media": [
+      {
+        "type": "video",
+        "url": "assets/media/proprioception_cpf/the_first_touch.MOV"
+      },
+      {
+        "type": "video",
+        "url": "assets/media/proprioception_cpf/me_experimenting _with_franka.MOV"
+      }
+    ]
   },
   {
     "id": 2,
@@ -64,7 +73,12 @@
     "authors": [
       "Navjot Singh Chahal"
     ],
-    "media": []
+    "media": [
+      {
+        "type": "image",
+        "url": "assets/media/quantum/cryogen_freezer_qhl_upenn.png"
+      }
+    ]
   },
   {
     "id": 4,

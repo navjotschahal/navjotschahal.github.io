@@ -5,6 +5,10 @@
 export const resolveUrl = (path: string | undefined | null): string => {
   if (!path) return '';
 
+  if (path.startsWith('public/')) {
+    path = path.slice('public/'.length);
+  }
+
   // Return immediately if it's already an absolute external URL (like your CDN)
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('//')) {
     return path;
