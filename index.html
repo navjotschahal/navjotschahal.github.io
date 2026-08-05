@@ -4,7 +4,52 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/bloch_sphere_icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nsc_portfolio</title>
+    <title>Navjot Singh Chahal — Robotics & Systems Software Engineer</title>
+    <meta
+      name="description"
+      content="Navjot Singh Chahal — Robotics, high-performance computing, and ML systems engineer. UPenn MSE. Work in proprioceptive robot control, CUDA/OpenCL kernels, FPGA acceleration, SLAM, and quantum hardware."
+    />
+    <meta name="author" content="Navjot Singh Chahal" />
+    <link rel="canonical" href="https://navjotschahal.github.io/" />
+
+    <!-- Open Graph (LinkedIn, Slack, iMessage, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Navjot Singh Chahal — Robotics & Systems Software Engineer" />
+    <meta
+      property="og:description"
+      content="Robotics, high-performance computing, and ML systems engineer. Proprioceptive robot control, CUDA/OpenCL kernels, FPGA acceleration, SLAM, and quantum hardware."
+    />
+    <meta property="og:url" content="https://navjotschahal.github.io/" />
+    <meta property="og:image" content="https://navjotschahal.github.io/bloch_sphere_icon.svg" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Navjot Singh Chahal — Robotics & Systems Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Robotics, high-performance computing, and ML systems engineer. CUDA/OpenCL kernels, FPGA acceleration, SLAM, and quantum hardware."
+    />
+    <meta name="twitter:image" content="https://navjotschahal.github.io/bloch_sphere_icon.svg" />
+
+    <!--
+      GitHub Pages SPA redirect decoder. The 404.html fallback encodes a
+      deep-link path after `?/`; this restores the real URL before React
+      Router mounts, so direct visits and refreshes on /projects etc. work.
+    -->
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -5,9 +5,11 @@ import './Navbar.css';
 
 const NavbarComponent: React.FC = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label="Main navigation">
       <div className="navbar-brand">
-        <NavLink to="/">{aboutData.name.split(' ').map((w: string) => w[0]).join('')}</NavLink>
+        <NavLink to="/" aria-label={`${aboutData.name} — home`}>
+          {aboutData.name.split(' ').map((w: string) => w[0]).join('')}
+        </NavLink>
       </div>
       <ul className="navbar-links">
         <li><NavLink to="/" end>Home</NavLink></li>

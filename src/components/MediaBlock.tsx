@@ -19,6 +19,9 @@ interface MediaBlockProps {
 
 const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  // Track which YouTube slides the user has activated (click-to-load, avoids
+  // loading a heavy YouTube iframe for every card on mount).
+  const [activatedYouTube, setActivatedYouTube] = useState<Record<number, boolean>>({});
   const mainSwiperRef = useRef<SwiperType | null>(null);
 
   if (!media || media.length === 0) {
@@ -60,6 +63,13 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
     }
 
     return url;
+  };
+
+  // Derive a lightweight YouTube thumbnail so we can defer the iframe.
+  const getYouTubeThumb = (url: string) => {
+    const embed = getYouTubeEmbed(url);
+    const id = embed.split('/embed/')[1]?.split(/[?&]/)[0];
+    return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : '';
   };
 
   return (
@@ -104,30 +114,55 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
             <div className="media-content">
               {item.type === 'image' && (
                 <>
-                  {/* 1. The Blurred Background */}
-                  <img 
-                    src={getUrl(item.url)} 
-                    alt="" 
-                    className="media-image-blur" 
+                  {/* 1. The Blurred Background (reuses the same decoded image) */}
+                  <img
+                    src={getUrl(item.url)}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    className="media-image-blur"
                   />
                   {/* 2. The Main Foreground Image */}
-                  <img 
-                    src={getUrl(item.url)} 
-                    alt={`Media item ${index}`} 
-                    className="media-image live-photo-effect" 
+                  <img
+                    src={getUrl(item.url)}
+                    alt={`Media item ${index}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="media-image live-photo-effect"
                   />
                 </>
               )}
               {item.type === 'youtube' && (
-                <iframe
-                  src={getYouTubeEmbed(item.url)}
-                  title={`YouTube video ${index}`}
-                  className="media-youtube"
-                  allowFullScreen
-                />
+                activatedYouTube[index] ? (
+                  <iframe
+                    src={`${getYouTubeEmbed(item.url)}?autoplay=1`}
+                    title={`YouTube video ${index}`}
+                    className="media-youtube"
+                    loading="lazy"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    className="media-youtube-poster"
+                    onClick={() => setActivatedYouTube((s) => ({ ...s, [index]: true }))}
+                    aria-label="Play video"
+                    style={{ backgroundImage: `url(${getYouTubeThumb(item.url)})` }}
+                  >
+                    <span className="media-youtube-play" aria-hidden="true">▶</span>
+                  </button>
+                )
               )}
               {item.type === 'video' && (
-                <video controls muted className="media-video">
+                <video
+                  controls
+                  muted
+                  playsInline
+                  preload="none"
+                  className="media-video"
+                >
                   <source
                     src={getUrl(item.url)}
                     type={item.url.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'}
@@ -154,7 +189,19 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
             <SwiperSlide key={index} className="thumbnail-slide">
               <div className="thumbnail-item">
                 {item.type === 'image' ? (
-                  <img src={getUrl(item.url)} alt={`Thumbnail ${index}`} />
+                  <img
+                    src={getUrl(item.url)}
+                    alt={`Thumbnail ${index}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : item.type === 'youtube' ? (
+                  <img
+                    src={getYouTubeThumb(item.url)}
+                    alt={`Thumbnail ${index}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
                   <div className="thumbnail-placeholder">{item.type}</div>
                 )}

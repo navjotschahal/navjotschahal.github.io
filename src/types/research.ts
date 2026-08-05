@@ -11,5 +11,6 @@ export interface ResearchType {
   paperUrl: string;
   codeUrl: string;
   authors: string[];
+  badge?: string;
   media: MediaItemType[];
 }

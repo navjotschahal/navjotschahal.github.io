@@ -1,14 +1,17 @@
-import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarComponent from './components/Navbar';
 import HomeComponent from './pages/Home';
-import ResearchComponent from './pages/Research';
-import ProjectsComponent from './pages/Projects';
-import ExperienceComponent from './pages/Experience';
-import ResumeComponent from './pages/Resume';
 import aboutData from './data/about.json';
 import { resolveUrl } from './utils/resolveUrl';
 import './App.css';
+
+// Route-level code splitting: keep the initial (Home) bundle small and load
+// heavier pages — and Swiper, which only the media pages use — on demand.
+const ResearchComponent = lazy(() => import('./pages/Research'));
+const ProjectsComponent = lazy(() => import('./pages/Projects'));
+const ExperienceComponent = lazy(() => import('./pages/Experience'));
+const ResumeComponent = lazy(() => import('./pages/Resume'));
 
 function isSafeUrl(url: string) {
   try {
@@ -24,32 +27,34 @@ const AppComponent: React.FC = () => {
     ? resolveUrl(aboutData.backgroundImage)
     : null;
 
-  const appStyle = safeBackground
-    ? {
-        backgroundImage: `url(${safeBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-      }
-    : {};
-
   return (
-    <HashRouter>
-      <div className="app-root" style={appStyle}>
-        {safeBackground && <div className="app-bg-overlay" />}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <div className="app-root">
+        {/* Fixed background layer — avoids `background-attachment: fixed`,
+            which repaints the whole background on every scroll frame. */}
+        {safeBackground && (
+          <>
+            <div
+              className="app-bg"
+              style={{ backgroundImage: `url(${safeBackground})` }}
+            />
+            <div className="app-bg-overlay" />
+          </>
+        )}
         <NavbarComponent />
         <main>
-          <Routes>
-            <Route path="/" element={<HomeComponent />} />
-            <Route path="/research" element={<ResearchComponent />} />
-            <Route path="/projects" element={<ProjectsComponent />} />
-            <Route path="/experience" element={<ExperienceComponent />} />
-            <Route path="/resume" element={<ResumeComponent />} />
-          </Routes>
+          <Suspense fallback={<div className="route-fallback">Loading…</div>}>
+            <Routes>
+              <Route path="/" element={<HomeComponent />} />
+              <Route path="/research" element={<ResearchComponent />} />
+              <Route path="/projects" element={<ProjectsComponent />} />
+              <Route path="/experience" element={<ExperienceComponent />} />
+              <Route path="/resume" element={<ResumeComponent />} />
+            </Routes>
+          </Suspense>
         </main>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

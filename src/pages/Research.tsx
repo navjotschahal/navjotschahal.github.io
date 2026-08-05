@@ -1,8 +1,12 @@
+import { Suspense, lazy } from 'react';
 import { ResearchType } from '../types/research';
-import researchData from '../data/research.json';
-import MediaBlockComponent from '../components/MediaBlock';
+import researchRaw from '../data/research.json';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
+
+const MediaBlockComponent = lazy(() => import('../components/MediaBlock'));
+
+const researchData = researchRaw as ResearchType[];
 
 const ResearchComponent: React.FC = () => {
   return (
@@ -12,7 +16,11 @@ const ResearchComponent: React.FC = () => {
       <div className="card-list">
         {researchData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlockComponent media={item.media} title={item.title} />
+            {item.media && item.media.length > 0 && (
+              <Suspense fallback={<div className="media-skeleton" />}>
+                <MediaBlockComponent media={item.media} title={item.title} />
+              </Suspense>
+            )}
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>

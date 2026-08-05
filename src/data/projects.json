@@ -2,26 +2,28 @@
   {
     "id": 1,
     "title": "Heterogeneous Computing Pipeline for Stream Compression",
-    "description": "Engineered a custom FPGA kernel, CPU NEON intrinsics, and modified lookup table for hardware-level synthesis achieving state-of-the-art 135 Mbps per-thread throughput, horizontally scalable by number of cores and FPGA synthesis real estate.",
+    "description": "Authored a custom OpenCL compute kernel on a Xilinx Ultra96 FPGA with a C++ host runtime managing host-to-device DMA transfers, kernel dispatch, and memory coherency — achieving 135 Mbps per-thread throughput, horizontally scalable by cores and FPGA synthesis real estate.",
     "tags": [
       "C++",
-      "HLS",
-      "FPGA",
       "OpenCL",
+      "FPGA",
+      "Xilinx Ultra96",
+      "HLS",
       "NEON Intrinsics",
       "SHA-256",
-      "Vitis HLS"
+      "DMA"
     ],
     "status": "Completed",
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
+    "reportUrl": "assets/media/ese5320socFPGA/SoC_Project_finalReport.pdf",
     "highlights": [
-      "Lempel-Ziv-Welch custom kernel developed for FPGA synthesis",
-      "Content-defined chunking (Gear hash table) with CPU NEON intrinsics",
-      "NEON-accelerated SHA-256 on CPU",
-      "C++ OpenCL kernel host programming for pipeline control with data-flow parallelism",
-      "Achieved 135 Mbps per-thread throughput — limited only by number of cores and kernel synthesis real estate"
+      "Authored a custom OpenCL compute kernel for stream compression on the Xilinx Ultra96 platform",
+      "Built a C++ host runtime managing host-to-device DMA transfers, kernel dispatch scheduling, and memory coherency",
+      "Profiled kernel occupancy, memory bandwidth, and host-device transfer overhead; applied tiling and buffer reuse to maximize accelerator efficiency",
+      "Content-defined chunking (Gear hash table) with NEON-accelerated SHA-256 on CPU for horizontal scaling",
+      "Achieved 135 Mbps per-thread throughput — limited only by number of cores and kernel synthesis real estate; validated against NumPy reference results"
     ],
     "media": [{
       "type": "image",
@@ -42,27 +44,28 @@
   {
     "id": 2,
     "title": "Autonomous F1/10th Robot Racer Agent — High Performance",
-    "description": "Full-stack autonomous racing system on the F1Tenth platform with LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS. Placed 2nd in University Competition.",
+    "description": "Full-stack autonomous racing system on the F1Tenth platform with LiDAR, depth camera, and IMU on an NVIDIA Jetson via ROS2. Implemented Particle Filter SLAM for 6-DOF localization and GPU-accelerated MPPI trajectory sampling for control at 50 Hz. Placed 2nd in University Competition.",
     "tags": [
       "C++",
       "Python",
       "ROS2",
-      "MPC",
+      "MPPI",
       "SLAM",
+      "Particle Filter",
       "LiDAR",
       "Jetson",
-      "Robotics"
+      "CUDA"
     ],
     "status": "Completed",
     "year": 2025,
     "githubUrl": "https://github.com/navjotschahal/model_predictive_control_f1_robo_racer",
     "liveUrl": "#",
     "highlights": [
-      "Interfaced LiDAR, depth camera, PWM controllers (VESC) on NVIDIA Jetson using ROS",
-      "Localization, navigation, sensing, RL, MPC, SLAM, Particle Filtering, Pure Pursuit — 2nd Rank University Competition",
-      "NeRF-based 3D perception for localization and path planning POC using scene reconstruction",
-      "Kinematic models using Cardan angles, curvature controllers, Kalman Filters, Markovian and optimization algorithms",
-      "Middleware: scheduling for real-time systems, inter-process communication, and OS abstractions"
+      "Team lead managing 4 students; deployed a fully autonomous ground vehicle on NVIDIA Jetson integrating LiDAR, depth camera, and IMU via ROS2 on Ubuntu Linux",
+      "Implemented Particle Filter SLAM for real-time 6-DOF pose estimation at 50 Hz, fusing LiDAR point cloud, depth, and IMU streams",
+      "Integrated GPU-accelerated sampling-based MPPI (CUDA / JAX-XLA kernel fusion) evaluating 1000+ trajectory candidates per cycle for steering and throttle",
+      "Developed a Visual-Inertial Odometry pipeline using LoFTR transformer-based dense feature extraction for robust localization under varying lighting and texture",
+      "Built kinematic models, curvature controllers, Kalman/Markovian estimation, and safety-critical multithreaded ROS2 nodes — 2nd Rank University Competition"
     ],
     "media": [
       {"type": "youtube", "url": "https://youtu.be/OSZjc79oTJo?feature=shared"},
@@ -83,8 +86,33 @@
   },
   {
     "id": 3,
+    "title": "Optical Flow and Scene Reconstruction",
+    "description": "Improved ego-motion tracking accuracy by 7% by implementing Lucas-Kanade optical flow with RANSAC outlier rejection for robust visual localization, integrating transformer-based (LoFTR) dense feature extraction for monocular 3D scene reconstruction.",
+    "tags": [
+      "Computer Vision",
+      "Optical Flow",
+      "LoFTR",
+      "RANSAC",
+      "Visual Localization",
+      "3D Reconstruction",
+      "Python"
+    ],
+    "status": "Completed",
+    "year": 2025,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "highlights": [
+      "Implemented Lucas-Kanade optical flow with RANSAC outlier rejection for robust ego-motion tracking",
+      "Improved scene recovery and ego-motion accuracy by 7% under challenging lighting and texture conditions",
+      "Integrated transformer-based (LoFTR) feature extraction for dense multi-view visual correspondence",
+      "Enabled monocular 3D scene reconstruction and mapping from image sequences"
+    ],
+    "media": []
+  },
+  {
+    "id": 4,
     "title": "Agentic AI Manager — Cross-Model Communication & Scaling (Akka)",
-    "description": "Built an Akka Actor system for multimodal scale-up, inter-model communication, and empowering ML models with functional programming tools using Scala. Light Bend Akka challenge 2025.",
+    "description": "Built an Akka Actor system on Scala Play for multimodal scale-up and inter-model communication, improving resource utilization by 40% and cutting P99 message latency by 150 ms with an intelligent agent selector and load balancer. LightBend Akka challenge 2025.",
     "tags": [
       "Scala",
       "Akka Actors",
@@ -97,15 +125,15 @@
     "githubUrl": "https://github.com/navjotschahal/distributed_autonomous_agents",
     "liveUrl": "#",
     "highlights": [
-      "Akka Actor system manager for multimodal scale-up and inter-model communication",
-      "Agent selector, load balancing, and actor-based asynchronous communication message protocol",
-      "Demonstrated power of functional programming (Scala) in building modular frameworks for agentic abilities",
-      "Manages clusters of various ML models for building cyber-intelligent systems achieving meaningful automation"
+      "Improved system resource utilization by 40% and reduced P99 message latency by 150 ms with a scalable Actor system manager on Scala Play",
+      "Enforced at-most-once and at-least-once delivery semantics per workload priority tier",
+      "Designed an intelligent agent selector and load balancer with asynchronous, queue-backed communication protocols routing cross-model workloads",
+      "Each agent runs on its own Akka actor — demonstrating functional programming for modular, cyber-intelligent automation frameworks"
     ],
     "media": []
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "RISC-V Microprocessor on Lattice FPGA",
     "description": "Built a RISC-V ISA-compliant microprocessor with multicycle, 5-stage pipelining, and a custom 8-stage Divider Module at University of Pennsylvania. Achieved 17.65 MHz clock speed with AXI4-Lite cache.",
     "tags": [
@@ -123,8 +151,8 @@
     "highlights": [
       "RISC-V ISA-compliant microprocessor with multicycle and 5-stage pipelining",
       "Custom 8-stage Divider Module for optimizing DIV instructions",
-      "Achieved 17.65 MHz clock speed with 4-stage AXI4-Lite cache",
-      "Implemented on Lattice FPGA"
+      "Achieved 17.65 MHz clock speed with a 4-stage AXI4-Lite cache hierarchy",
+      "Synthesized and deployed on Lattice FPGA via Xilinx Vivado; validated with the Dhrystone benchmark suite under CocoTb simulation"
     ],
     "media": [
       {
@@ -138,9 +166,9 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Low-Light Image Enhancement using Transformer-Based Neural Network",
-    "description": "Based on RetinexFormer, a transformer-based model with modified loss criterion achieving PSNR 22.7 and live video enhancement at 5 FPS. Further accelerated via quantization, pruning, and GPU acceleration.",
+    "description": "Based on RetinexFormer, a transformer-based model with a modified loss criterion achieving PSNR 22.7 and live video enhancement at 5 FPS. Further accelerated via quantization, pruning, and GPU acceleration.",
     "tags": [
       "PyTorch",
       "Transformers",
@@ -154,9 +182,10 @@
     "githubUrl": "https://github.com/navjotschahal/ForkedRetinexformer",
     "liveUrl": "#",
     "highlights": [
-      "Based on RetinexFormer transformer model with modifications to loss criterion",
-      "Achieved PSNR of 22.7 and live video enhancement at 5 FPS",
-      "Further accelerated using quantization, pruning, and vertical GPU acceleration (high-performance computing)"
+      "Trained a RetinexFormer transformer model based on Retinex theory for low-light image and video enhancement",
+      "Achieved PSNR of 22.7 with live video processing at 5 FPS",
+      "Experimented with Charbonnier Loss, L1-Luminance Loss, Gradient Graph Laplacian Regularizer, ReduceLROnPlateau scheduler, and Lion optimizer — cutting convergence time by 1.5%",
+      "Applied quantization, pruning, and vertical GPU acceleration to meet the real-time FPS target; visualized training dynamics with TensorBoard"
     ],
     "media": [
       {
@@ -166,14 +195,15 @@
     ]
   },
   {
-    "id": 6,
-    "title": "Deep Neural Network Model Compression using CSR",
-    "description": "Engineered custom sparse linear layer and implemented model pruning, quantization, and hard pruning techniques to compress large-scale DNNs. Achieved 75% memory reduction in VGG16 (500+MB to 277MB).",
+    "id": 7,
+    "title": "DNN Compression, Quantization & GPU Inference Profiling",
+    "description": "Achieved a 75% reduction in VGG16 memory footprint (500 MB to 125 MB) via INT8 quantization and structured pruning, with per-operator inference profiling across CUDA, Apple MPS, and CPU execution providers using ONNX Runtime.",
     "tags": [
       "PyTorch",
-      "DNN Compression",
-      "Pruning",
-      "Quantization",
+      "ONNX Runtime",
+      "INT8 Quantization",
+      "Structured Pruning",
+      "Operator Profiling",
       "CSR",
       "CUDA",
       "Apple MPS"
@@ -183,10 +213,10 @@
     "githubUrl": "https://github.com/navjotschahal/DNN_ACCELERATION",
     "liveUrl": "#",
     "highlights": [
-      "Custom sparse linear layer with model pruning, quantization, and hard pruning to compress large-scale DNNs",
-      "75% reduction in memory footprint of VGG16 (500+MB to 277MB) while preserving inference accuracy",
-      "Enables deployment on constrained edge platforms",
-      "Comparative benchmarking: Apple Metal Performance Shaders (MPS) vs NVIDIA CUDA — throughput, latency, and portability"
+      "Achieved 75% memory-footprint reduction on VGG16 (500 MB to 125 MB) via INT8 quantization and structured pruning while preserving inference accuracy",
+      "Developed a custom sparse Linear layer for iterative pruning and saved the compressed model in CSR format; experimented with Global, Channel, Structured, and Unstructured pruning",
+      "Lowered the PyTorch computational graph to an ONNX intermediate representation for framework-agnostic deployment",
+      "Profiled inference across CUDA, Apple MPS, and CPU execution providers via ONNX Runtime — identifying bandwidth-bound vs. compute-bound operators and quantifying numerical accuracy degradation"
     ],
     "media": [
       {
@@ -196,13 +226,13 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "NSC Portfolio",
     "description": "A personal portfolio website built with React and Vite to showcase research, projects, and experience. Features dynamic JSON-driven content, media embeddings, and a responsive dark-theme design.",
     "tags": [
       "React",
       "Vite",
-      "JavaScript",
+      "TypeScript",
       "CSS",
       "React Router"
     ],

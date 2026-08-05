@@ -1,26 +1,30 @@
 [
   {
     "id": 1,
-    "title": "Proprioception Sensory Awareness for Low-Level Robot Control",
-    "description": "Independent study at Figueroa GRASP Lab on proprioception-based sensory awareness in robots for low-level control, aiding exteroception (vision, active sensors). Inspired by the human muscle system.",
-    "abstract": "This research investigates manufacturer-agnostic proprioceptive data acquisition for robotic platforms. We build C++ and Python libraries to acquire current and torque sensor data from robot actuators (Franka arms, Castor Bot), then model environmental awareness in PyBullet simulators. A key goal is building inference characteristics on current/torque relationships to design auto-tuning models deployable on any robotic platform — analogous to proprioception in the human neuromuscular system.",
+    "title": "Virtual Skin Manifold: Proprioceptive Contact Sensing for Humanoid Robots",
+    "description": "Research at Figueroa GRASP Lab on a virtual skin manifold for full-body contact detection using only internal joint torque sensing — achieving 0.2 mm precision at 100 Hz via particle filtering, eliminating the need for external tactile skins (~$30,000 in hardware).",
+    "abstract": "This research replaces external tactile skins with a proprioception-only contact sensing pipeline. We engineer a virtual skin manifold over the robot's morphology and run a high-frequency particle filter at 100 Hz over internal joint torque sensor streams to localize contact events with 0.2 mm spatial precision on humanoid hardware. Building on manufacturer-agnostic C++/Python data acquisition libraries for robot actuators (Franka arms, Castor Bot), we model current/torque inference characteristics analogous to proprioception in the human neuromuscular system. Ongoing work extends this to a GPU-accelerated voxel-based 3D shape learning pipeline in PyTorch that infers grasping and manipulation strategies for unknown objects in a blind state — no vision, contact sensing only.",
     "tags": [
       "Robotics",
       "Proprioception",
-      "Control Systems",
-      "PyBullet",
+      "Particle Filter",
+      "Contact Detection",
+      "Humanoids",
+      "PyTorch",
       "C++",
       "Python",
       "Franka"
     ],
     "year": 2026,
-    "venue": "University of Pennsylvania — Figueroa GRASP Lab (Independent Study)",
+    "venue": "University of Pennsylvania — Figueroa GRASP Lab",
     "paperUrl": "#",
     "codeUrl": "#",
     "authors": [
       "Navjot Singh Chahal"
     ],
     "media": [
+      {"type":"youtube", "url": "https://youtu.be/BeQFIN6_Y1I?si=nqQKanKnWn-d-lZY" },
+      {"type":"youtube", "url": "https://youtu.be/QNEUcPARFws?si=ToC2BdqC48G8iWty" },
       {
         "type": "video",
         "url": "assets/media/proprioception_cpf/the_first_touch.MOV"
@@ -33,14 +37,17 @@
   },
   {
     "id": 2,
-    "title": "Modular Robotic Platform with String Actuators and Multi-Agent Cognitive Perception",
-    "description": "Research at Mod Lab developing string actuators for the modular robotic platform Abott, and defining a multi-agent system for analysis of proprioceptive actuator data for task cognitive perception.",
-    "abstract": "We design and build string actuators for the Abott modular robotic platform, defining the scope of a multi-agent system that analyzes proprioceptive actuator data to achieve task cognitive perception. Independent agents either reinforce motor control or mutate the physical agent configuration based on sensory inputs, enabling adaptive, self-reconfiguring robotic behavior.",
+    "title": "Reinforcement Learning for Self-Reconfiguring Modular Robots",
+    "description": "Research at Mod Lab: a PPO reinforcement learning policy for quadruped locomotion that generalizes across dynamically mutating morphologies, plus string actuators and multi-agent cognitive perception for the modular robotic platform Abott.",
+    "abstract": "We architect a Proximal Policy Optimization (PPO) reinforcement learning policy to drive autonomous locomotion adaptation for a quadruped robot, generalizing across dynamically mutating morphologies and terrain conditions. Training runs on GPU-accelerated simulation infrastructure built in Isaac Lab and MuJoCo with domain-randomized tensor workloads for rapid policy iteration. In parallel, we design and build string actuators for the Abott modular robotic platform and define a multi-agent system that analyzes proprioceptive actuator data for task cognitive perception — independent agents either reinforce motor control or mutate the physical agent configuration based on sensory inputs, enabling adaptive, self-reconfiguring robotic behavior.",
     "tags": [
+      "Reinforcement Learning",
+      "PPO",
+      "Isaac Lab",
+      "MuJoCo",
       "Modular Robotics",
-      "Actuators",
       "Multi-Agent Systems",
-      "Cognitive Perception",
+      "Actuators",
       "Motor Control"
     ],
     "year": 2026,
@@ -54,20 +61,20 @@
   },
   {
     "id": 3,
-    "title": "Experimental Validation of Quantum Algorithms on IBM Quantum Hardware",
-    "description": "Developed interactive Python notebooks for ESE 5090 QHEL Lab to perform experimental validation of quantum gates and algorithms on IBM Cloud quantum devices. Engineered quantum spin control apparatus.",
-    "abstract": "We developed an interactive Python notebook enabling students to perform hands-on experimental validation of quantum gates on real IBM quantum devices via IBM Cloud. Implemented algorithms including Grover's, Shor's, Quantum Fourier Transform, Bernstein-Vazirani, Simon's Algorithm, and quantum cryptography. Additionally, engineered a quantum control apparatus using the Digital Programmable Function Generator Moku-go for arbitrary function generation, enabling quantum spin control — specifically manipulating the intrinsic angular momentum (spin) of protons in Hydrogen atoms to prepare, evolve, and measure quantum states via NMR.",
+    "title": "Automated Quantum Control: Rabi Chevron Mapping on Liquid-State NMR",
+    "description": "Research at the Quantum Hardware Lab: an automated quantum control software pipeline for a room-temperature liquid-state NMR system, sweeping RF pulses to map Rabi chevrons on nuclear spins — accelerating qubit calibration by 80%. Plus experimental validation of quantum algorithms on IBM Quantum hardware.",
+    "abstract": "We engineered an automated quantum control software pipeline for a room-temperature liquid-state NMR system, programmatically sweeping radio-frequency (RF) pulses to map Rabi chevrons on the nuclear spins of a water molecule. By extracting optimal π-pulse durations and zero-detuning frequencies from the chevron interference patterns, physical qubit calibration time was accelerated by 80% — bridging high-level algorithmic intent with low-level hardware execution. The control apparatus uses the Digital Programmable Function Generator Moku-go for arbitrary function generation and quantum spin control of Hydrogen protons. Additionally, we developed interactive Python notebooks for ESE 5090 enabling hands-on experimental validation of quantum gates on real IBM devices via IBM Cloud, implementing Grover's, Shor's, Quantum Fourier Transform, Bernstein-Vazirani, Simon's Algorithm, and quantum cryptography protocols, with analysis of noise, decoherence, and gate fidelity against ideal simulation.",
     "tags": [
       "Quantum Computing",
+      "NMR",
+      "Rabi Chevrons",
+      "Quantum Control",
       "Qiskit",
       "IBM Quantum",
-      "Grover's Algorithm",
-      "Shor's Algorithm",
-      "NMR",
       "Moku-go"
     ],
     "year": 2025,
-    "venue": "University of Pennsylvania — ESE 5090 QHEL Lab (Teaching & Research Assistant)",
+    "venue": "University of Pennsylvania — Quantum Hardware Lab / ESE 5090 QHEL Lab",
     "paperUrl": "#",
     "codeUrl": "#",
     "authors": [
@@ -82,16 +89,18 @@
   },
   {
     "id": 4,
-    "title": "Model Predictive Control for F1Tenth Autonomous Racing",
-    "description": "Formulated and implemented a Model Predictive Control (MPC) controller for the F1Tenth 1/10th-scale autonomous racing platform. The controller uses convex optimization to generate optimal steering and acceleration inputs over a receding horizon.",
-    "abstract": "This work presents an MPC-based autonomous vehicle controller using a kinematic bicycle model with state space [x, y, θ, v]. We formulate a convex Quadratic Program (QP) minimizing trajectory deviation, input effort, and input rate of change subject to vehicle dynamic constraints. The continuous ODE is linearized via first-order Taylor expansion and discretized with Forward Euler, then solved at each timestep using CVXPY with the OSQP backend. The controller was validated in F1Tenth simulation and on a physical car in the Levine hallway at UPenn, achieving 2nd place in the University Competition.",
+    "title": "Sampling-Based and Convex MPC for F1Tenth Autonomous Racing",
+    "description": "Formulated and implemented Model Predictive Control for the F1Tenth 1/10th-scale autonomous racing platform — a convex QP controller (CVXPY/OSQP) and a GPU-accelerated sampling-based MPPI controller evaluating 1000+ trajectory candidates per cycle at 50 Hz. Placed 2nd in the University Competition.",
+    "abstract": "This work presents two MPC formulations for autonomous racing on a kinematic bicycle model with state space [x, y, θ, v]. First, a convex Quadratic Program (QP) minimizing trajectory deviation, input effort, and input rate of change subject to vehicle dynamic constraints — linearized via first-order Taylor expansion, discretized with Forward Euler, and solved each timestep using CVXPY with the OSQP backend. Second, a sampling-based MPPI controller implemented with JAX JIT compilation and vmap vectorization across 1000+ trajectory candidates per cycle, leveraging XLA for GPU kernel fusion to eliminate redundant memory transfers and achieve 50 Hz real-time inference on an NVIDIA Jetson. Both controllers were validated in F1Tenth simulation and on a physical car at UPenn, achieving 2nd place in the University Competition.",
     "tags": [
       "Robotics",
       "Control Systems",
       "MPC",
+      "MPPI",
+      "JAX",
+      "XLA",
       "Convex Optimization",
       "Autonomous Vehicles",
-      "Python",
       "CVXPY",
       "OSQP"
     ],

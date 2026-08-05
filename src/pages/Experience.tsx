@@ -1,8 +1,12 @@
+import { Suspense, lazy } from 'react';
 import { ExperienceType } from '../types/experience';
-import experienceData from '../data/experience.json';
-import MediaBlockComponent from '../components/MediaBlock';
+import experienceRaw from '../data/experience.json';
 import './PageCommon.css';
 import './Experience.css';
+
+const MediaBlockComponent = lazy(() => import('../components/MediaBlock'));
+
+const experienceData = experienceRaw as ExperienceType[];
 
 const ExperienceComponent: React.FC = () => {
   return (
@@ -14,7 +18,11 @@ const ExperienceComponent: React.FC = () => {
           <div key={item.id} className="timeline-item">
             <div className="timeline-dot" />
             <div className="card">
-              <MediaBlockComponent media={item.media} title={item.role} />
+              {item.media && item.media.length > 0 && (
+                <Suspense fallback={<div className="media-skeleton" />}>
+                  <MediaBlockComponent media={item.media} title={item.role} />
+                </Suspense>
+              )}
               <div className="card-body">
                 <div className="card-header-row">
                   <div>
