@@ -1,8 +1,9 @@
-import { ProjectType } from '../types/project';
+import { Suspense, lazy } from 'react';
 import projectsData from '../data/projects.json';
-import MediaBlockComponent from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
+
+const MediaBlockComponent = lazy(() => import('../components/MediaBlock'));
 
 const statusColors = {
   'Completed': '#4caf50',
@@ -18,7 +19,11 @@ const ProjectsComponent: React.FC = () => {
       <div className="card-list">
         {projectsData.map((item) => (
           <div key={item.id} className="card">
-            <MediaBlockComponent media={item.media} title={item.title} />
+            {item.media && item.media.length > 0 && (
+              <Suspense fallback={<div className="media-skeleton" />}>
+                <MediaBlockComponent media={item.media} title={item.title} />
+              </Suspense>
+            )}
             <div className="card-body">
               <div className="card-header-row">
                 <h3 className="card-title">{item.title}</h3>

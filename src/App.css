@@ -5,6 +5,19 @@
   min-height: 100vh;
 }
 
+/* Fixed, GPU-composited background layer. Replaces
+   `background-attachment: fixed`, which forces a background repaint on
+   every scroll frame and is a common cause of scroll jank on mobile. */
+.app-bg {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .app-bg-overlay {
   position: fixed;
   inset: 0;
@@ -17,4 +30,10 @@
 .app-root > main {
   position: relative;
   z-index: 1;
+}
+
+.route-fallback {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #aaa;
 }

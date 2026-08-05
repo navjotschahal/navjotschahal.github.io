@@ -42,6 +42,11 @@
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.2s, transform 0.2s;
+  /* Skip rendering/layout for off-screen cards so long media-heavy lists
+     scroll smoothly. contain-intrinsic-size reserves height to keep the
+     scrollbar stable before a card is first painted. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
 }
 
 .card:hover {

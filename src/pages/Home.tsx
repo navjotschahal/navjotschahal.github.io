@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import aboutData from '../data/about.json';
 import researchData from '../data/research.json';
 import projectsData from '../data/projects.json';
 import experienceData from '../data/experience.json';
-import MediaBlockComponent from '../components/MediaBlock';
 import { resolveUrl } from '../utils/resolveUrl';
+
+// Defer Swiper (heavy) off the initial paint — the media showcases are below
+// the hero fold, so the carousel bundle loads after the page is interactive.
+const MediaBlockComponent = lazy(() => import('../components/MediaBlock'));
 import './PageCommon.css';
 import './Home.css';
 
@@ -162,7 +165,9 @@ const HomeComponent: React.FC = () => {
                   </div>
                 </div>
                 <div className="home-projects-media">
-                  <MediaBlockComponent media={item.media} title={item.title} />
+                  <Suspense fallback={<div className="media-skeleton" />}>
+                    <MediaBlockComponent media={item.media} title={item.title} />
+                  </Suspense>
                 </div>
               </div>
             ))}
@@ -220,7 +225,9 @@ const HomeComponent: React.FC = () => {
                   </div>
                 </div>
                 <div className="home-projects-media">
-                  <MediaBlockComponent media={project.media} />
+                  <Suspense fallback={<div className="media-skeleton" />}>
+                    <MediaBlockComponent media={project.media} />
+                  </Suspense>
                 </div>
               </div>
             ))}
