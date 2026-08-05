@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarComponent from './components/Navbar';
 import HomeComponent from './pages/Home';
 import aboutData from './data/about.json';
@@ -28,7 +28,7 @@ const AppComponent: React.FC = () => {
     : null;
 
   return (
-    <HashRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="app-root">
         {/* Fixed background layer — avoids `background-attachment: fixed`,
             which repaints the whole background on every scroll frame. */}
@@ -54,7 +54,7 @@ const AppComponent: React.FC = () => {
           </Suspense>
         </main>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

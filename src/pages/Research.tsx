@@ -1,9 +1,12 @@
 import { Suspense, lazy } from 'react';
-import researchData from '../data/research.json';
+import { ResearchType } from '../types/research';
+import researchRaw from '../data/research.json';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
 const MediaBlockComponent = lazy(() => import('../components/MediaBlock'));
+
+const researchData = researchRaw as ResearchType[];
 
 const ResearchComponent: React.FC = () => {
   return (

@@ -17,6 +17,7 @@
     "year": 2025,
     "githubUrl": "#",
     "liveUrl": "#",
+    "reportUrl": "assets/media/ese5320socFPGA/SoC_Project_finalReport.pdf",
     "highlights": [
       "Authored a custom OpenCL compute kernel for stream compression on the Xilinx Ultra96 platform",
       "Built a C++ host runtime managing host-to-device DMA transfers, kernel dispatch scheduling, and memory coherency",

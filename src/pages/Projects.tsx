@@ -1,11 +1,14 @@
 import { Suspense, lazy } from 'react';
-import projectsData from '../data/projects.json';
+import { ProjectType } from '../types/project';
+import projectsRaw from '../data/projects.json';
 import { resolveUrl } from '../utils/resolveUrl';
 import './PageCommon.css';
 
 const MediaBlockComponent = lazy(() => import('../components/MediaBlock'));
 
-const statusColors = {
+const projectsData = projectsRaw as ProjectType[];
+
+const statusColors: Record<string, string> = {
   'Completed': '#4caf50',
   'In Progress': '#ff9800',
   'Archived': '#9e9e9e',
@@ -49,11 +52,14 @@ const ProjectsComponent: React.FC = () => {
                 ))}
               </div>
               <div className="card-links">
-                {item.githubUrl && (
+                {item.githubUrl && item.githubUrl !== '#' && (
                   <a href={resolveUrl(item.githubUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">💻 GitHub</a>
                 )}
                 {item.liveUrl && item.liveUrl !== '#' && (
                   <a href={resolveUrl(item.liveUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">🌐 Live</a>
+                )}
+                {item.reportUrl && item.reportUrl !== '#' && (
+                  <a href={resolveUrl(item.reportUrl)} target="_blank" rel="noopener noreferrer" className="link-btn">📄 Report</a>
                 )}
               </div>
             </div>

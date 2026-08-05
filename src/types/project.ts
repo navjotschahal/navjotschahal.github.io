@@ -10,5 +10,7 @@ export interface ProjectType {
   githubUrl: string;
   liveUrl: string;
   highlights: string[];
+  badge?: string;
+  reportUrl?: string;
   media: MediaItemType[];
 }
