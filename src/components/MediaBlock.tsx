@@ -161,6 +161,7 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
                   muted
                   playsInline
                   preload="none"
+                  poster={item.poster ? getUrl(item.poster) : undefined}
                   className="media-video"
                 >
                   <source
@@ -198,6 +199,13 @@ const MediaBlockComponent: React.FC<MediaBlockProps> = ({ media }) => {
                 ) : item.type === 'youtube' ? (
                   <img
                     src={getYouTubeThumb(item.url)}
+                    alt={`Thumbnail ${index}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : item.type === 'video' && item.poster ? (
+                  <img
+                    src={getUrl(item.poster)}
                     alt={`Thumbnail ${index}`}
                     loading="lazy"
                     decoding="async"
