@@ -1,5 +1,74 @@
 [
   {
+    "id": 9,
+    "title": "Vision Pipeline: RGB-D Object Selection and Camera-to-Robot Calibration for Bimanual Manipulation",
+    "description": "Sensor-to-world-belief infrastructure for robot manipulation on an Intel RealSense D435i and a bimanual OpenArm. One click selects an object, a promptable video segmenter tracks it at 24 Hz, and aligned depth turns the mask into a metric 3D cloud, centroid, and oriented bounds that are handed to a bimanual grasp planner. A calibration suite places the camera in the robot's frame and checks the result by drawing forward kinematics and the posed robot model over live images.",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "RGB-D",
+      "RealSense D435i",
+      "EfficientTAM",
+      "SAM 2",
+      "Hand-Eye Calibration",
+      "ChArUco",
+      "Open3D",
+      "ICP",
+      "MuJoCo",
+      "OpenCV"
+    ],
+    "status": "In Progress",
+    "year": 2026,
+    "githubUrl": "#",
+    "liveUrl": "#",
+    "highlights": [
+      "Built a bounded live capture → mask → geometry pipeline with one-value latest slots between threads, so a slow stage drops stale frames instead of building a latency backlog; sustained 24 Hz masks and geometry on a live D435i with an RTX 3070, on top of deterministic aligned RGB-D recording and replay",
+      "Benchmarked EfficientTAM-Ti against SAM 2.1 Hiera Tiny behind one segmenter contract and selected EfficientTAM-Ti: 38 vs 53 ms per tracked frame, 0.970 vs 0.907 mean IoU on same-seed targets, and 0 vs 21 hidden frames locked onto a pasted distractor in an occlusion, exit, and return stress suite",
+      "Turned a tracked mask plus aligned depth into metric geometry with depth-continuity filtering, a RANSAC support plane fitted in a ring around the object, and a PCA-oriented box of the visible surface; centroid repeatable to 0.5–1.4 mm (std) over 300 static frames of a taped box",
+      "Calibrated the bench camera to the bimanual OpenArm two ways: hand-guided ChArUco / ArUco-grid hand-eye that reads joint state from the arm driver's shared memory, and a marker plate placed against the robot base that needs no marker on the hand",
+      "Verified calibrations visually without a ground-truth rig by projecting forward-kinematics link chains onto the live image and drawing the posed MuJoCo model over depth points colored by distance; an offline lab replays FPFH + RANSAC and multi-scale ICP step by step and showed why a 5 mm inlier RMSE at 12% overlap was still a wrong global match",
+      "Added webcam human-pose links (YOLO pose) retargeted to a KUKA iiwa14 in MuJoCo through damped IK and an impedance controller, with strict mypy, ruff, and pytest across the package"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/click_select_box_3d.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/fk_overlay_bimanual.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/depth_residual_right_arm.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/click_select_ball_3d.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/hand_eye_capture.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/fk_overlay_hand_guided.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/tracking_stress_suite.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/depth_residual_static.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/vision_pipeline/marker_identify.jpg"
+      }
+    ]
+  },
+  {
     "id": 1,
     "title": "Heterogeneous Computing Pipeline for Stream Compression",
     "description": "Authored a custom OpenCL compute kernel on a Xilinx Ultra96 FPGA with a C++ host runtime managing host-to-device DMA transfers, kernel dispatch, and memory coherency — achieving 135 Mbps per-thread throughput, horizontally scalable by cores and FPGA synthesis real estate.",

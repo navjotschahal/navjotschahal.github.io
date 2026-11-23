@@ -23,6 +23,26 @@
       "Navjot Singh Chahal"
     ],
     "media": [
+      {
+        "type": "video",
+        "url": "assets/media/proprioception_cpf/franka_two_contact_localization.mp4",
+        "poster": "assets/media/proprioception_cpf/franka_two_contact_localization_poster.jpg"
+      },
+      {
+        "type": "video",
+        "url": "assets/media/proprioception_cpf/openarm_bimanual_box_grasp.mp4",
+        "poster": "assets/media/proprioception_cpf/openarm_bimanual_box_grasp_poster.jpg"
+      },
+      {
+        "type": "video",
+        "url": "assets/media/proprioception_cpf/franka_bimanual_pick_place_catch.mp4",
+        "poster": "assets/media/proprioception_cpf/franka_bimanual_pick_place_catch_poster.jpg"
+      },
+      {
+        "type": "video",
+        "url": "assets/media/proprioception_cpf/belief_heat_diffusion.mp4",
+        "poster": "assets/media/proprioception_cpf/belief_heat_diffusion_poster.jpg"
+      },
       {"type":"youtube", "url": "https://youtu.be/BeQFIN6_Y1I?si=nqQKanKnWn-d-lZY" },
       {"type":"youtube", "url": "https://youtu.be/tQR_GjnA_Vs" },
       {"type":"youtube", "url": "https://youtu.be/QNEUcPARFws?si=ToC2BdqC48G8iWty" },
